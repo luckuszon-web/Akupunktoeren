@@ -133,6 +133,11 @@ p { margin: 0 0 1em; color: var(--color-text); }
 .topbar a { display: inline-flex; align-items: center; gap: 0.4em; opacity: 0.95; }
 .topbar a:hover { opacity: 1; text-decoration: underline; }
 
+@media (max-width: 600px) {
+  .topbar-address { display: none; }
+  .topbar .container { gap: 0.3rem 1.25rem; }
+}
+
 /* -------------------- header / nav -------------------- */
 .site-header { position: relative; z-index: 40; background: transparent; }
 .site-header .container {
@@ -279,6 +284,10 @@ p { margin: 0 0 1em; color: var(--color-text); }
 
 /* shorter banner used on every subpage */
 .page-banner { min-height: 380px; }
+
+@media (max-width: 600px) {
+  .page-banner { min-height: 400px; align-items: flex-end; }
+}
 .page-banner .hero-content { padding-block: 2.5rem; max-width: 720px; }
 .page-banner h1 { font-size: clamp(1.75rem, 3.4vw, 2.4rem); margin-bottom: 0.3em; }
 .page-banner-contact {

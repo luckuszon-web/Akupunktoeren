@@ -67,7 +67,7 @@ def header(current):
       {icon("phone")}
       31 60 88 80
     </a>
-    <span>
+    <span class="topbar-address">
       {icon("map-pin")}
       Pennehave 9, 2960 Rungsted Kyst
     </span>
@@ -245,7 +245,7 @@ def page(slug, title, description, current, banner_eyebrow, banner_title, body, 
 <title>{title} | Akupunktur Charlotte Kuszon</title>
 <meta name="description" content="{description}">
 <link rel="icon" href="../assets/images/favicon.png">
-<link rel="stylesheet" href="../assets/css/style.css?v=6">
+<link rel="stylesheet" href="../assets/css/style.css?v=8">
 </head>
 <body>
 <a class="skip-link" href="#main">Spring til indhold</a>
