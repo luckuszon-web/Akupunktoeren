@@ -395,6 +395,7 @@ p { margin: 0 0 1em; color: var(--color-text); }
 /* -------------------- CTA band -------------------- */
 .cta-band {
   position: relative;
+  padding-block: var(--section-space);
   color: var(--color-white);
   background: linear-gradient(rgba(34, 34, 34, 0.72), rgba(34, 34, 34, 0.72)), url("../images/hero.jpg") center/cover no-repeat;
 }
