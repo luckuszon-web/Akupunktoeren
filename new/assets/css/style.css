@@ -107,11 +107,21 @@ p { margin: 0 0 1em; color: var(--color-text); }
   flex-shrink: 0;
 }
 
+/* -------------------- transparent header over hero -------------------- */
+.header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
+
 /* -------------------- top bar -------------------- */
 .topbar {
-  background: var(--color-accent);
+  background: rgba(0, 0, 0, 0.18);
   color: var(--color-white);
   font-size: 0.85rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 .topbar .container {
   display: flex;
@@ -124,7 +134,7 @@ p { margin: 0 0 1em; color: var(--color-text); }
 .topbar a:hover { opacity: 1; text-decoration: underline; }
 
 /* -------------------- header / nav -------------------- */
-.site-header { position: relative; z-index: 40; background: var(--color-white); }
+.site-header { position: relative; z-index: 40; background: transparent; }
 .site-header .container {
   display: flex;
   align-items: center;
@@ -132,7 +142,13 @@ p { margin: 0 0 1em; color: var(--color-text); }
   gap: 1.5rem;
   padding-block: 0.75rem;
 }
-.logo img { height: 64px; width: auto; }
+.logo img {
+  height: 64px;
+  width: auto;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
 
 .nav { display: flex; align-items: center; gap: 1.75rem; }
 .nav-list { display: flex; align-items: center; gap: 1.6rem; flex-wrap: wrap; }
@@ -141,9 +157,12 @@ p { margin: 0 0 1em; color: var(--color-text); }
   font-weight: 500;
   font-size: 0.95rem;
   padding: 0.5em 0;
+  color: var(--color-white);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
 }
 .nav-list > li > a:hover,
-.nav-list > li.current > a { color: var(--color-accent); }
+.nav-list > li.current > a { color: var(--color-cta); }
+.nav-toggle { color: var(--color-white); }
 
 .has-dropdown > a { display: inline-flex; align-items: center; gap: 0.35em; }
 .dropdown {
@@ -216,6 +235,9 @@ p { margin: 0 0 1em; color: var(--color-text); }
   }
   .nav.is-open { transform: translateX(0); }
   .nav-list { flex-direction: column; align-items: stretch; gap: 0.25rem; }
+  .nav-list > li > a { color: var(--color-dark); text-shadow: none; }
+  .nav-list > li > a:hover,
+  .nav-list > li.current > a { color: var(--color-accent); }
   .dropdown {
     position: static;
     opacity: 1;
