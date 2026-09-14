@@ -168,6 +168,27 @@ p { margin: 0 0 1em; color: var(--color-text); }
 }
 .dropdown a { display: block; padding: 0.55em 0.75em; border-radius: 6px; font-size: 0.9rem; }
 .dropdown a:hover { background: var(--color-light); color: var(--color-accent); }
+.dropdown-note { display: block; font-size: 0.78rem; color: var(--color-text); font-weight: 400; }
+
+/* mega dropdown ("Behandlinger") */
+.dropdown-mega {
+  display: flex;
+  gap: 0.5rem;
+  min-width: 480px;
+  padding: 0.75rem;
+}
+.dropdown-col { flex: 1; min-width: 200px; }
+.dropdown-col + .dropdown-col { border-left: 1px solid var(--color-light); padding-left: 1rem; }
+.dropdown-heading {
+  margin: 0.25em 0.75em 0.4em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--color-accent);
+}
+.dropdown-heading a { color: inherit; padding: 0; }
+.dropdown-heading a:hover { background: none; text-decoration: underline; }
 
 .nav-cta { margin-left: 0.25rem; }
 .nav-toggle {
@@ -205,6 +226,8 @@ p { margin: 0 0 1em; color: var(--color-text); }
     padding-left: 1rem;
   }
   .has-dropdown.is-open .dropdown { display: block; }
+  .dropdown-mega { min-width: 0; padding: 0; flex-direction: column; gap: 0; }
+  .dropdown-col + .dropdown-col { border-left: none; padding-left: 0; margin-top: 0.5rem; }
   .nav-cta { margin: 1rem 0 0; }
   .nav-cta .btn { width: 100%; }
 }
@@ -302,9 +325,31 @@ p { margin: 0 0 1em; color: var(--color-text); }
   .content-row.reverse .content-row-media { order: 0; }
 }
 
-/* -------------------- promo sections (app cross-promo) -------------------- */
-.promo { background: var(--color-light); }
-.promo .content-row-media img { max-width: 340px; }
+/* -------------------- about clinic / stats -------------------- */
+.about-clinic { background: var(--color-light); }
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.75rem;
+}
+.stat-card {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(34, 34, 34, 0.06);
+}
+.stat-card .feature-icon { margin-inline: auto; }
+.stat-card h3 { font-size: 1.02rem; margin-bottom: 0.35em; }
+.stat-card p { font-size: 0.88rem; margin: 0; }
+
+@media (max-width: 960px) {
+  .stat-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .stat-grid { grid-template-columns: 1fr; }
+}
 
 /* -------------------- CTA band -------------------- */
 .cta-band {
