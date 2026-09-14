@@ -6,7 +6,7 @@
 <title>Akupunktur Charlotte Kuszon | Professionel akupunktur i Rungsted</title>
 <meta name="description" content="Professionel akupunktur i Rungsted med holistisk tilgang. Akupunktur, posturologi, iris analyse, healing og fjernhealing hos Charlotte Kuszon.">
 <link rel="icon" href="assets/images/favicon.png">
-<link rel="stylesheet" href="assets/css/style.css?v=9">
+<link rel="stylesheet" href="assets/css/style.css?v=10">
 </head>
 <body>
 <a class="skip-link" href="#main">Spring til indhold</a>
@@ -36,7 +36,8 @@
     </a>
 
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Åbn menu">
-      <svg class="icon" viewBox="0 0 24 24" style="width:26px;height:26px"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icon icon-menu" viewBox="0 0 24 24" style="width:26px;height:26px"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg class="icon icon-close" viewBox="0 0 24 24" style="width:26px;height:26px"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
 
     <nav class="nav" id="siteNav">
@@ -276,7 +277,9 @@
   var nav = document.getElementById('siteNav');
   toggle.addEventListener('click', function () {
     var open = nav.classList.toggle('is-open');
+    toggle.classList.toggle('is-open', open);
     toggle.setAttribute('aria-expanded', open);
+    toggle.setAttribute('aria-label', open ? 'Luk menu' : 'Åbn menu');
   });
   document.querySelectorAll('.has-dropdown > a').forEach(function (link) {
     link.addEventListener('click', function (e) {

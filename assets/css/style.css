@@ -168,7 +168,6 @@ p { margin: 0 0 1em; color: var(--color-text); }
 }
 .nav-list > li > a:hover,
 .nav-list > li.current > a { color: var(--color-cta); }
-.nav-toggle { color: var(--color-white); }
 
 .has-dropdown > a { display: inline-flex; align-items: center; gap: 0.35em; }
 .dropdown {
@@ -218,12 +217,18 @@ p { margin: 0 0 1em; color: var(--color-text); }
 .nav-cta { margin-left: 0.25rem; }
 .nav-toggle {
   display: none;
+  position: relative;
+  z-index: 60;
   background: none;
   border: none;
   padding: 0.4rem;
   cursor: pointer;
-  color: var(--color-dark);
+  color: var(--color-white);
 }
+.nav-toggle .icon-close { display: none; }
+.nav-toggle.is-open { color: var(--color-dark); }
+.nav-toggle.is-open .icon-menu { display: none; }
+.nav-toggle.is-open .icon-close { display: block; }
 
 @media (max-width: 960px) {
   .nav-toggle { display: inline-flex; }

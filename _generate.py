@@ -12,6 +12,7 @@ ICONS = {
     "check": '<polyline points="20 6 9 17 4 12"/>',
     "chevron-down": '<polyline points="6 9 12 15 18 9"/>',
     "menu": '<line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/>',
+    "close": '<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>',
 }
 
 def icon(name, cls="icon", style=""):
@@ -85,7 +86,8 @@ def header(current):
     </a>
 
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Åbn menu">
-      {icon("menu", style="width:26px;height:26px")}
+      {icon("menu", cls="icon icon-menu", style="width:26px;height:26px")}
+      {icon("close", cls="icon icon-close", style="width:26px;height:26px")}
     </button>
 
     <nav class="nav" id="siteNav">
@@ -174,7 +176,9 @@ SCRIPT = '''<script>
   var nav = document.getElementById('siteNav');
   toggle.addEventListener('click', function () {
     var open = nav.classList.toggle('is-open');
+    toggle.classList.toggle('is-open', open);
     toggle.setAttribute('aria-expanded', open);
+    toggle.setAttribute('aria-label', open ? 'Luk menu' : 'Åbn menu');
   });
   document.querySelectorAll('.has-dropdown > a').forEach(function (link) {
     link.addEventListener('click', function (e) {
@@ -245,7 +249,7 @@ def page(slug, title, description, current, banner_eyebrow, banner_title, body, 
 <title>{title} | Akupunktur Charlotte Kuszon</title>
 <meta name="description" content="{description}">
 <link rel="icon" href="../assets/images/favicon.png">
-<link rel="stylesheet" href="../assets/css/style.css?v=9">
+<link rel="stylesheet" href="../assets/css/style.css?v=10">
 </head>
 <body>
 <a class="skip-link" href="#main">Spring til indhold</a>
