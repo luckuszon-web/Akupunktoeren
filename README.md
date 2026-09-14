@@ -1,23 +1,23 @@
-# Akupunktøren.com – statisk kopi
+# Akupunktøren.com – moderne statisk site
 
-Dette repo indeholder en statisk HTML/CSS/JS-kopi af [akupunktoeren.com](https://akupunktoeren.com/), hentet direkte fra det nuværende WordPress-site som forberedelse til flytning til ny hosting.
+Dette repo indeholder den officielle hjemmeside for Akupunktur Charlotte Kuszon: ren, håndskrevet HTML/CSS/JS uden nogen afhængighed af WordPress, Elementor eller andre plugins. Ingen build-proces — det er almindelige statiske filer, der kan hostes hvor som helst (GitHub Pages, Netlify, Vercel, et almindeligt webhotel osv.).
 
-## Hvad er med
+## Struktur
 
-Alle sider fra sitemap er hentet, inkl. billeder, CSS og JS:
+- `index.html` — forsiden
+- Én mappe pr. underside, f.eks. `akupunktur/`, `priser/`, `kontakt/` osv. — alle indeholder en `index.html`
+- `assets/css/style.css` — al styling (ingen andre CSS-filer)
+- `assets/fonts/` — selv-hostet Inter-skrifttype
+- `assets/images/` — alle billeder sitet bruger
+- `archive-wordpress-mirror/` — den tidligere WordPress-baserede udgave af sitet, gemt som reference/backup. Bruges ikke af den nuværende side og kan slettes, når I er trygge ved, at intet fra den gamle side mangler.
+- `_generate.py` + `_gen_*.py` — Python-scripts brugt til at generere undersidernes HTML ud fra fælles header/footer-skabeloner. De er ikke en del af selve hjemmesiden (ingen side linker til dem), men er nyttigt værktøj, hvis en side skal opdateres eller en ny side skal tilføjes i samme stil. Kør fx `python3 _gen_priser.py` for at genskabe `priser/index.html` efter en ændring i scriptet.
 
-- Forside (`index.html`)
-- `akupunktur/` + de 8 underemner (`smerter-og-spaendinger`, `hoved-og-nakke`, `tinnitus`, `hoefeber`, `idraets-skader`, `astma`, `ryg-og-bevaegeapparat`, `hormonforstyrrelser`)
-- `posturologi/`, `iris-analyse/`, `healing/`, `fjernhealing/`, `kursus-i-skovhealing-og-meditation/`
-- `akupunktoeren-baggrund-og-uddannelse/`, `priser/`, `kontakt/`
-- `ydelse/`, `referencer/`, `reference/`, `galleri/`, `tak-for-din-henvendelse/`, `book-akupunktur/`
-- Alle assets under `wp-content/` og `wp-includes/`
+## Design
 
-Interne links mellem siderne er tjekket og peger korrekt på de lokale filer (ingen døde links).
-
-## Uafhængig af det originale site
-
-Alle billeder, CSS og JS-filer (inkl. lazy-loadede billeder, cookie-samtykke-script og andre "deferred" scripts) er hentet ned lokalt og alle links er omskrevet fra `https://akupunktoeren.com/...` til relative stier. Sitet loader altså **ikke** længere nogen ressourcer fra det oprindelige WordPress-site — det kan køre fuldstændig uafhængigt, også efter det gamle site lukkes ned. Rene analytics-/telemetri-scripts (WP Statistics) og døde metadata-links (RSS-feed, oEmbed, WP REST-discovery, RSD/xmlrpc) er fjernet helt, da de udelukkende pegede tilbage på den gamle WordPress-backend.
+- Farver: oliven-grøn (`#7a8033`), gul/amber (`#f4b637`), mørk (`#222222`) — samme branding som hidtil.
+- Ikoner er inline SVG (Feather Icons, MIT-licens) — ingen ikon-font-afhængighed.
+- Billeder bruger native `loading="lazy"` — intet JavaScript-bibliotek til lazy-loading.
+- Header er gennemsigtig og ligger ovenpå hero-billedet på hver side; bliver til en almindelig hvid bjælke på mobil, når menuen er åben.
 
 ## Sådan ses siden lokalt
 
@@ -27,26 +27,27 @@ python3 -m http.server 8000
 
 Åbn derefter `http://localhost:8000/`.
 
-## Vigtige begrænsninger (ingen WordPress-backend)
-
-Da dette er en **statisk** kopi uden WordPress bagved, virker følgende ting fra det oprindelige site stadig **ikke** automatisk, fordi de kræver en server bagved:
-
-1. **Booking-knapper** der linker videre til eksterne booking-/kalendersystemer virker fortsat, hvis de peger på en ekstern tjeneste – men eventuelle indlejrede WordPress-widgets med serverkald vil ikke virke.
-2. **WP REST API-referencer** (`wp-json/...` i nogle scripts' konfiguration) er ikke fjernet, men bruges ikke ved almindeligt sidebesøg — kun hvis en specifik plugin-funktion aktivt kalder dem.
-
 ## Kontaktformular (Formspree)
 
-Kontaktformularen på `/kontakt/` er lavet om fra Forminator (som krævede en AJAX-hentning fra WordPress for overhovedet at vise felterne) til en almindelig statisk HTML-formular, der sender direkte til Formspree:
+Kontaktformularen på `/kontakt/` sender direkte til Formspree — ingen backend nødvendig:
 
 - Endpoint: `https://formspree.io/f/xwlkgnke`
-- Felter: Navn, Tlf. nr. (valgfrit), Email, Besked — samme felter som den oprindelige formular.
-- Indsendelse sker via JavaScript (`fetch`) uden sidereload, og ved succes sendes brugeren videre til den eksisterende `/tak-for-din-henvendelse/`-side. Ved fejl vises en fejlbesked med telefonnummer som alternativ.
-- Der er tilføjet et skjult "honeypot"-felt (`_gotcha`) som simpel spam-beskyttelse.
+- Felter: Navn, Tlf. nr. (valgfrit), Email, Besked.
+- Indsendelse sker via JavaScript (`fetch`) uden sidereload. Ved succes sendes brugeren videre til `/tak-for-din-henvendelse/`. Ved fejl vises en fejlbesked med telefonnummer som alternativ.
+- Et skjult honeypot-felt (`_gotcha`) beskytter mod simpel spam.
 
-Formspree-kontoen skal selv konfigureres til at sende notifikationer til den rigtige emailadresse (ckuszon@akupunktoeren.com) under formularens indstillinger på formspree.io.
+Formspree-kontoen skal selv konfigureres til at sende notifikationer til ckuszon@akupunktoeren.com under formularens indstillinger på formspree.io. Formspree kræver typisk, at den første rigtige indsendelse bekræftes via email, før formularen er fuldt aktiveret.
+
+## Sider uden originalt indhold
+
+Tre sider (`ydelse/`, `referencer/`, `reference/`, `galleri/`) havde intet reelt indhold i den oprindelige WordPress-side (kun tomme skabeloner eller generisk demotekst). De er erstattet med korte, ærlige sider i stedet for opfundet indhold:
+
+- `galleri/` viser to rigtige billeder, der allerede bruges andre steder på sitet.
+- `referencer/` fremhæver faktuelle points (siden 1998, RAB-godkendt, uddannelse) i stedet for patientudtalelser, da der ikke findes nogen offentliggjorte.
+- `ydelse/` og `reference/` er korte sider, der linker videre til de rigtige sider (behandlinger, priser, referencer).
 
 ## Næste skridt
 
-- Verificér SEO-metadata (canonical-tags peger stadig på `akupunktoeren.com`, hvilket er korrekt, så længe det nye site også ligger på samme domæne).
-- Sæt op med rigtig hosting (f.eks. Netlify/Vercel/GitHub Pages) og peg domænet dertil.
-- Test kontaktformularen efter deployment (Formspree kræver typisk at man bekræfter den første indsendelse via email, før formularen er "aktiveret").
+- Sæt rigtig hosting op (Netlify/Vercel/GitHub Pages) og peg domænet `akupunktoeren.com` dertil.
+- Test kontaktformularen efter deployment.
+- Overvej at slette `archive-wordpress-mirror/`, når I har verificeret, at den nye side dækker alt fra den gamle.

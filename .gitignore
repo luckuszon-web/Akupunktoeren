@@ -1,5 +1,5 @@
 wget.log
 node_modules/
 .DS_Store
-new/__pycache__/
+__pycache__/
 *.pyc
