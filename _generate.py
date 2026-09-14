@@ -245,7 +245,7 @@ def page(slug, title, description, current, banner_eyebrow, banner_title, body, 
 <title>{title} | Akupunktur Charlotte Kuszon</title>
 <meta name="description" content="{description}">
 <link rel="icon" href="../assets/images/favicon.png">
-<link rel="stylesheet" href="../assets/css/style.css?v=3">
+<link rel="stylesheet" href="../assets/css/style.css?v=4">
 </head>
 <body>
 <a class="skip-link" href="#main">Spring til indhold</a>
