@@ -1,3 +1,5 @@
 wget.log
 node_modules/
 .DS_Store
+new/__pycache__/
+*.pyc
