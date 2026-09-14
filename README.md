@@ -31,12 +31,22 @@ python3 -m http.server 8000
 
 Da dette er en **statisk** kopi uden WordPress bagved, virker følgende ting fra det oprindelige site stadig **ikke** automatisk, fordi de kræver en server bagved:
 
-1. **Kontaktformularen** (`kontakt/index.html`) bruger Forminator-pluginnet, som sender data til `wp-admin/admin-ajax.php`. Denne peger stadig på det oprindelige WordPress-site (den eneste resterende afhængighed), da der ikke findes noget lokalt alternativ endnu. Den skal erstattes med en statisk formular-løsning (f.eks. Formspree, Netlify Forms, eller en simpel serverless-funktion), før det gamle site lukkes ned.
-2. **Booking-knapper** der linker videre til eksterne booking-/kalendersystemer virker fortsat, hvis de peger på en ekstern tjeneste – men eventuelle indlejrede WordPress-widgets med serverkald vil ikke virke.
-3. **WP REST API-referencer** (`wp-json/...` i nogle scripts' konfiguration) er ikke fjernet, men bruges ikke ved almindeligt sidebesøg — kun hvis en specifik plugin-funktion aktivt kalder dem.
+1. **Booking-knapper** der linker videre til eksterne booking-/kalendersystemer virker fortsat, hvis de peger på en ekstern tjeneste – men eventuelle indlejrede WordPress-widgets med serverkald vil ikke virke.
+2. **WP REST API-referencer** (`wp-json/...` i nogle scripts' konfiguration) er ikke fjernet, men bruges ikke ved almindeligt sidebesøg — kun hvis en specifik plugin-funktion aktivt kalder dem.
+
+## Kontaktformular (Formspree)
+
+Kontaktformularen på `/kontakt/` er lavet om fra Forminator (som krævede en AJAX-hentning fra WordPress for overhovedet at vise felterne) til en almindelig statisk HTML-formular, der sender direkte til Formspree:
+
+- Endpoint: `https://formspree.io/f/xwlkgnke`
+- Felter: Navn, Tlf. nr. (valgfrit), Email, Besked — samme felter som den oprindelige formular.
+- Indsendelse sker via JavaScript (`fetch`) uden sidereload, og ved succes sendes brugeren videre til den eksisterende `/tak-for-din-henvendelse/`-side. Ved fejl vises en fejlbesked med telefonnummer som alternativ.
+- Der er tilføjet et skjult "honeypot"-felt (`_gotcha`) som simpel spam-beskyttelse.
+
+Formspree-kontoen skal selv konfigureres til at sende notifikationer til den rigtige emailadresse (ckuszon@akupunktoeren.com) under formularens indstillinger på formspree.io.
 
 ## Næste skridt
 
-- Vælg en løsning til kontaktformularen og opdater `kontakt/index.html` (og evt. `book-akupunktur/index.html`) — det er det sidste stykke, der reelt afhænger af det gamle site.
 - Verificér SEO-metadata (canonical-tags peger stadig på `akupunktoeren.com`, hvilket er korrekt, så længe det nye site også ligger på samme domæne).
 - Sæt op med rigtig hosting (f.eks. Netlify/Vercel/GitHub Pages) og peg domænet dertil.
+- Test kontaktformularen efter deployment (Formspree kræver typisk at man bekræfter den første indsendelse via email, før formularen er "aktiveret").
