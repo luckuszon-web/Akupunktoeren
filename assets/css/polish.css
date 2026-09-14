@@ -1,0 +1,41 @@
+/* Additive visual polish — small, safe refinements on top of the
+   original design. Doesn't change layout, colors, or typography;
+   only adds motion/depth cues that were missing. */
+
+.elementor-button,
+.forminator-button-submit,
+.fixed-contact-go a {
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.elementor-button:hover,
+.forminator-button-submit:hover,
+.fixed-contact-go a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.18);
+}
+
+.elementor-icon-box-icon,
+.elementor-widget-image img {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.elementor-widget-image:hover img {
+  transform: scale(1.015);
+}
+
+/* Give the two "one video" round photos (Myggefri/Allergifri) a touch of
+   depth so they read as intentional media cards, not flat cut-outs. */
+.elementor-widget-image img[style*="border-radius"],
+.elementor-view-stacked .elementor-icon {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+/* Consistent, visible keyboard focus without changing the resting look. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid var(--cta, #f4b637);
+  outline-offset: 2px;
+}
