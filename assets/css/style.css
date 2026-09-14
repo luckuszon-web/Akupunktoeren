@@ -144,18 +144,11 @@ p { margin: 0 0 1em; color: var(--color-text); }
 }
 .logo {
   display: flex;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
   flex-shrink: 0;
-  overflow: hidden;
 }
 .logo img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
+  height: 72px;
+  width: auto;
 }
 
 .nav { display: flex; align-items: center; gap: 1.75rem; }
