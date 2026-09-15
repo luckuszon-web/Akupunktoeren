@@ -9,7 +9,6 @@ Dette repo indeholder den officielle hjemmeside for Akupunktur Charlotte Kuszon:
 - `assets/css/style.css` — al styling (ingen andre CSS-filer)
 - `assets/fonts/` — selv-hostet Inter-skrifttype
 - `assets/images/` — alle billeder sitet bruger
-- `archive-wordpress-mirror/` — den tidligere WordPress-baserede udgave af sitet, gemt som reference/backup. Bruges ikke af den nuværende side og kan slettes, når I er trygge ved, at intet fra den gamle side mangler.
 - `_generate.py` + `_gen_*.py` — Python-scripts brugt til at generere undersidernes HTML ud fra fælles header/footer-skabeloner. De er ikke en del af selve hjemmesiden (ingen side linker til dem), men er nyttigt værktøj, hvis en side skal opdateres eller en ny side skal tilføjes i samme stil. Kør fx `python3 _gen_priser.py` for at genskabe `priser/index.html` efter en ændring i scriptet.
 
 ## Design
@@ -50,4 +49,3 @@ Tre sider (`ydelse/`, `referencer/`, `reference/`, `galleri/`) havde intet reelt
 
 - Sæt rigtig hosting op (Netlify/Vercel/GitHub Pages) og peg domænet `akupunktoeren.com` dertil.
 - Test kontaktformularen efter deployment.
-- Overvej at slette `archive-wordpress-mirror/`, når I har verificeret, at den nye side dækker alt fra den gamle.
