@@ -5,6 +5,36 @@ import os
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
+SITE_URL = "https://akupunktoeren.com"
+
+LOCAL_BUSINESS_SCHEMA = f'''<script type="application/ld+json">
+{{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Akupunktur Charlotte Kuszon",
+  "image": "{SITE_URL}/assets/images/hero.jpg",
+  "logo": "{SITE_URL}/assets/images/logo.png",
+  "url": "{SITE_URL}/",
+  "telephone": "+4531608880",
+  "email": "ckuszon@akupunktoeren.com",
+  "address": {{
+    "@type": "PostalAddress",
+    "streetAddress": "Pennehave 9",
+    "postalCode": "2960",
+    "addressLocality": "Rungsted Kyst",
+    "addressCountry": "DK"
+  }},
+  "openingHoursSpecification": [
+    {{
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Thursday"],
+      "opens": "08:30",
+      "closes": "17:45"
+    }}
+  ]
+}}
+</script>'''
+
 ICONS = {
     "phone": '<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>',
     "mail": '<path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/>',
@@ -239,17 +269,32 @@ def page_banner(eyebrow, title, extra_contact=True):
 '''
 
 
-def page(slug, title, description, current, banner_eyebrow, banner_title, body, include_cta_band=True):
+def page(slug, title, description, current, banner_eyebrow, banner_title, body, include_cta_band=True, noindex=False):
     cta = CTA_BAND if include_cta_band else ""
+    full_title = f"{title} | Akupunktur Charlotte Kuszon"
+    canonical = f"{SITE_URL}/{slug}/"
+    robots_tag = '<meta name="robots" content="noindex, follow">\n' if noindex else ""
     html = f'''<!DOCTYPE html>
 <html lang="da">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{title} | Akupunktur Charlotte Kuszon</title>
+<title>{full_title}</title>
 <meta name="description" content="{description}">
+{robots_tag}<link rel="canonical" href="{canonical}">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="da_DK">
+<meta property="og:title" content="{full_title}">
+<meta property="og:description" content="{description}">
+<meta property="og:url" content="{canonical}">
+<meta property="og:image" content="{SITE_URL}/assets/images/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{full_title}">
+<meta name="twitter:description" content="{description}">
+<meta name="twitter:image" content="{SITE_URL}/assets/images/hero.jpg">
 <link rel="icon" href="../assets/images/favicon.png">
 <link rel="stylesheet" href="../assets/css/style.css?v=10">
+{LOCAL_BUSINESS_SCHEMA}
 </head>
 <body>
 <a class="skip-link" href="#main">Spring til indhold</a>

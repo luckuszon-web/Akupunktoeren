@@ -37,6 +37,14 @@ Kontaktformularen på `/kontakt/` sender direkte til Formspree — ingen backend
 
 Formspree-kontoen skal selv konfigureres til at sende notifikationer til ckuszon@akupunktoeren.com under formularens indstillinger på formspree.io. Formspree kræver typisk, at den første rigtige indsendelse bekræftes via email, før formularen er fuldt aktiveret.
 
+## SEO
+
+- `robots.txt` og `sitemap.xml` ligger i rodmappen. Kør `python3 _gen_sitemap.py` for at genskabe sitemap.xml, hvis en side tilføjes/fjernes eller dens noindex-status ændres (listen over sider holdes manuelt i toppen af scriptet).
+- Alle sider har unik `<title>`, meta-description, canonical-tag samt Open Graph- og Twitter-card-tags (deling på sociale medier).
+- Strukturerede data (JSON-LD, `MedicalClinic`) er indsat på alle sider med navn, adresse, telefon og åbningstider.
+- `ydelse/`, `reference/` og `tak-for-din-henvendelse/` har `<meta name="robots" content="noindex, follow">`, da de er tynde omdirigerings-/kvitteringssider uden selvstændigt indhold at rangere på.
+- Alt ovenstående forudsætter, at sitet i sidste ende ligger på `https://akupunktoeren.com/` — hvis domænet ændres, skal `SITE_URL` i `_generate.py` samt URL'erne i `index.html`, `robots.txt` og `_gen_sitemap.py` opdateres tilsvarende.
+
 ## Sider uden originalt indhold
 
 Tre sider (`ydelse/`, `referencer/`, `reference/`, `galleri/`) havde intet reelt indhold i den oprindelige WordPress-side (kun tomme skabeloner eller generisk demotekst). De er erstattet med korte, ærlige sider i stedet for opfundet indhold:

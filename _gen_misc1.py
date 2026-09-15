@@ -59,6 +59,7 @@ page(
     "Ydelser",
     ydelse_body,
     include_cta_band=False,
+    noindex=True,
 )
 
 # ---------------------------------------------------------- tak-for-din-henv.
@@ -85,4 +86,5 @@ page(
     "Tak for din henvendelse",
     tak_body,
     include_cta_band=False,
+    noindex=True,
 )

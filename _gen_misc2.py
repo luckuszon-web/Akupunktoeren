@@ -62,4 +62,4 @@ reference_body = '''  <section class="section">
     </div>
   </section>
 '''
-page("reference", "Reference", "Referencer og baggrund for Akupunktur Charlotte Kuszon i Rungsted.", "", "Akupunktur Charlotte Kuszon", "Reference", reference_body, include_cta_band=False)
+page("reference", "Reference", "Referencer og baggrund for Akupunktur Charlotte Kuszon i Rungsted.", "", "Akupunktur Charlotte Kuszon", "Reference", reference_body, include_cta_band=False, noindex=True)
