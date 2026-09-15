@@ -152,7 +152,7 @@ FOOTER = f'''<footer class="site-footer">
           <a href="mailto:ckuszon@akupunktoeren.com">ckuszon@akupunktoeren.com</a>
         </li>
       </ul>
-      <p>Kontakt os for et tilbud.</p>
+      <p>Kontakt mig for et tilbud.</p>
     </div>
     <div>
       <h4>Åbningstider</h4>
@@ -197,7 +197,7 @@ CTA_BAND = f'''  <section class="cta-band">
       <div>
         <h2>Kontakt</h2>
         <p>Bus linje 375 + 381 kører lige til døren.</p>
-        <p>Vi ligger ganske tæt på Rungsted station.</p>
+        <p>Jeg ligger ganske tæt på Rungsted station.</p>
         <ul class="check-list">
           <li>
             {icon("check")}
@@ -205,7 +205,7 @@ CTA_BAND = f'''  <section class="cta-band">
           </li>
           <li>
             {icon("check")}
-            Erfarne fagfolk med mangeårig erfaring
+            Erfaren fagperson med mangeårig erfaring
           </li>
         </ul>
         <div class="btn-row">
@@ -215,7 +215,7 @@ CTA_BAND = f'''  <section class="cta-band">
       </div>
       <div class="cta-card">
         <h3>Har du spørgsmål eller ønsker du et tilbud?</h3>
-        <p>Kontakt os allerede i dag for kompetent sparring og rådgivning ved din behandling.</p>
+        <p>Kontakt mig allerede i dag for kompetent sparring og rådgivning ved din behandling.</p>
       </div>
     </div>
   </section>

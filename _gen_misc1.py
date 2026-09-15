@@ -19,10 +19,10 @@ book_body = '''  <section class="section">
 
       <h2>Bestil tid til akupunktur i Rungsted</h2>
       <p>Hvis du er interesseret i at bestille tid til akupunktur i Rungsted, eller vil høre mere om akupunktur som behandlingsform, så er du meget velkommen til at kontakte mig for en uforpligtende samtale.</p>
-      <p>Har du yderligere spørgsmål, er du velkommen til at skrive en mail på <a href="mailto:ckuszon@akupunktoeren.com" style="color:var(--color-accent)">ckuszon@akupunktoeren.com</a> eller ringe til os på telefon 31 60 88 80.</p>
+      <p>Har du yderligere spørgsmål, er du velkommen til at skrive en mail på <a href="mailto:ckuszon@akupunktoeren.com" style="color:var(--color-accent)">ckuszon@akupunktoeren.com</a> eller ringe til mig på telefon 31 60 88 80.</p>
       <div class="btn-row article-cta">
         <a class="btn btn-accent" href="../priser/">Se priser</a>
-        <a class="btn btn-cta" href="../kontakt/">Kontakt os i dag</a>
+        <a class="btn btn-cta" href="../kontakt/">Kontakt mig i dag</a>
       </div>
     </div>
   </section>
@@ -42,7 +42,7 @@ ydelse_body = f'''  <section class="section">
     <div class="container status-page">
       <div class="status-icon">{icon("phone")}</div>
       <h2>Denne side er flyttet</h2>
-      <p>Du kan finde vores behandlinger og priser via menuen, eller gå direkte til en af siderne herunder.</p>
+      <p>Du kan finde mine behandlinger og priser via menuen, eller gå direkte til en af siderne herunder.</p>
       <div class="btn-row" style="justify-content:center;">
         <a class="btn btn-accent" href="../akupunktur/">Se behandlinger</a>
         <a class="btn btn-cta" href="../priser/">Se priser</a>
@@ -53,7 +53,7 @@ ydelse_body = f'''  <section class="section">
 page(
     "ydelse",
     "Ydelser",
-    "Se vores behandlinger og priser hos Akupunktur Charlotte Kuszon i Rungsted.",
+    "Se mine behandlinger og priser hos Akupunktur Charlotte Kuszon i Rungsted.",
     "priser",
     "Akupunktur Charlotte Kuszon",
     "Ydelser",
@@ -66,8 +66,8 @@ tak_body = f'''  <section class="section">
     <div class="container status-page">
       <div class="status-icon">{icon("check")}</div>
       <h2>Tak for din henvendelse</h2>
-      <p>Vi kontakter dig hurtigst muligt. Du kan også gå tilbage til forsiden, hvis du ønsker.</p>
-      <p>Hvis du ønsker at bestille tid til en akupunkturbehandling, er du velkommen til at skrive en mail på <a href="mailto:ckuszon@akupunktoeren.com" style="color:var(--color-accent)">ckuszon@akupunktoeren.com</a> eller ringe til os på telefon 31 60 88 80.</p>
+      <p>Jeg kontakter dig hurtigst muligt. Du kan også gå tilbage til forsiden, hvis du ønsker.</p>
+      <p>Hvis du ønsker at bestille tid til en akupunkturbehandling, er du velkommen til at skrive en mail på <a href="mailto:ckuszon@akupunktoeren.com" style="color:var(--color-accent)">ckuszon@akupunktoeren.com</a> eller ringe til mig på telefon 31 60 88 80.</p>
       <p>Du er også meget velkommen til at kontakte mig for en uforpligtende samtale, hvis du vil høre mere om akupunktur som behandlingsform.</p>
       <div class="btn-row" style="justify-content:center;">
         <a class="btn btn-accent" href="../index.html">Til forsiden</a>
@@ -79,7 +79,7 @@ tak_body = f'''  <section class="section">
 page(
     "tak-for-din-henvendelse",
     "Tak for din henvendelse",
-    "Tak for din henvendelse til Akupunktur Charlotte Kuszon. Vi vender tilbage hurtigst muligt.",
+    "Tak for din henvendelse til Akupunktur Charlotte Kuszon. Jeg vender tilbage hurtigst muligt.",
     "",
     "Akupunktur Charlotte Kuszon",
     "Tak for din henvendelse",

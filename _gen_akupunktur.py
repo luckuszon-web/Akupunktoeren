@@ -7,7 +7,7 @@ body = '''  <section class="section">
       <h2>Helhedsorienteret behandling med akupunktur</h2>
       <p>Akupunkturen bygger på en holistisk menneskeopfattelse, hvilket vil sige, at det er hele mennesket, der behandles, ikke blot symptomet. Derfor er det vigtigt for akupunktøren at få så meget information af patienten som muligt for at stille den mest optimale akupunkturdiagnose.</p>
       <p>Patienten stilles derfor en lang række spørgsmål vedrørende den helbredsmæssige tilstand. Desuden kan akupunktøren anvende en række diagnoseværktøjer, såsom pulsdiagnose, tungediagnose, irisanalyse m.v., som alle har til formål at klarlægge/bekræfte kroppens ubalancer.</p>
-      <p>Vi har stor erfaring med akupunktur som smertelindring og ved spændinger forskellige steder i kroppen. Allergier for dyr og pollen, luftvejsproblemer, astma, eksem, høfeber og tinnitus er alle gener og lidelser, som vi har gode erfaringer med at behandle ved hjælp af akupunktur. Faktisk har vi så gode resultater med at bruge akupunktur på høfeber-patienter, at langt de fleste får det bedre eller slipper helt af med høfeber.</p>
+      <p>Jeg har stor erfaring med akupunktur som smertelindring og ved spændinger forskellige steder i kroppen. Allergier for dyr og pollen, luftvejsproblemer, astma, eksem, høfeber og tinnitus er alle gener og lidelser, som jeg har gode erfaringer med at behandle ved hjælp af akupunktur. Faktisk har jeg så gode resultater med at bruge akupunktur på høfeber-patienter, at langt de fleste får det bedre eller slipper helt af med høfeber.</p>
       <p>Derudover kan mange øjenlidelser og problemer med led og gigt behandles med akupunktur, hvor der i langt de fleste tilfælde ville kunne mærkes en markant forbedring.</p>
 
       <h3>Akupunktur kan i det hele taget have en lindrende effekt på en lang række smerter og lidelser, blandt andet</h3>
@@ -37,10 +37,10 @@ body = '''  <section class="section">
 
       <h2>Bestil tid til akupunktur i Rungsted</h2>
       <p>Hvis du er interesseret i at bestille tid til akupunktur i Rungsted, eller vil høre mere om akupunktur som behandlingsform, så er du meget velkommen til at kontakte mig for en uforpligtende samtale.</p>
-      <p>Har du yderligere spørgsmål, er du velkommen til at skrive en mail på <a href="mailto:ckuszon@akupunktoeren.com" style="color:var(--color-accent)">ckuszon@akupunktoeren.com</a> eller ringe til os på telefon 31 60 88 80.</p>
+      <p>Har du yderligere spørgsmål, er du velkommen til at skrive en mail på <a href="mailto:ckuszon@akupunktoeren.com" style="color:var(--color-accent)">ckuszon@akupunktoeren.com</a> eller ringe til mig på telefon 31 60 88 80.</p>
       <div class="btn-row article-cta">
         <a class="btn btn-accent" href="../priser/">Se priser</a>
-        <a class="btn btn-cta" href="../kontakt/">Kontakt os i dag</a>
+        <a class="btn btn-cta" href="../kontakt/">Kontakt mig i dag</a>
       </div>
     </div>
   </section>

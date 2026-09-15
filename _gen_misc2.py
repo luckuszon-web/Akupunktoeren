@@ -21,7 +21,7 @@ page("galleri", "Galleri", "Billeder fra Akupunkturklinik Charlotte Kuszon i Run
 referencer_body = f'''  <section class="section">
     <div class="container article" style="max-width:820px;">
       <h2>Hvorfor vælge Akupunktur Charlotte Kuszon?</h2>
-      <p>Vi har endnu ikke offentliggjort skriftlige patientudtalelser her på siden, men her er, hvorfor patienter i Rungsted og omegn vælger klinikken:</p>
+      <p>Jeg har endnu ikke offentliggjort skriftlige patientudtalelser her på siden, men her er, hvorfor patienter i Rungsted og omegn vælger klinikken:</p>
       <div class="stat-grid" style="grid-template-columns:repeat(3,1fr); margin-bottom:2.5rem;">
         <div class="stat-card">
           <div class="feature-icon">{icon("check")}</div>
@@ -39,10 +39,10 @@ referencer_body = f'''  <section class="section">
           <p>Løbende efteruddannelse gennem mere end 30 år.</p>
         </div>
       </div>
-      <p>Har du selv haft en god oplevelse hos os, hører vi meget gerne fra dig – ring eller skriv, så kan din historie komme med her.</p>
+      <p>Har du selv haft en god oplevelse hos mig, hører jeg meget gerne fra dig – ring eller skriv, så kan din historie komme med her.</p>
       <div class="btn-row">
         <a class="btn btn-accent" href="../akupunktoeren-baggrund-og-uddannelse/">Læs mere om Charlotte</a>
-        <a class="btn btn-cta" href="../kontakt/">Kontakt os</a>
+        <a class="btn btn-cta" href="../kontakt/">Kontakt mig</a>
       </div>
     </div>
   </section>
@@ -53,11 +53,11 @@ page("referencer", "Referencer", "Hvorfor patienter vælger Akupunktur Charlotte
 # ------------------------------------------------------------------ reference
 reference_body = '''  <section class="section">
     <div class="container status-page">
-      <h2>Se vores referencer</h2>
-      <p>Denne side er flyttet – find vores referencer og baggrund via linkene herunder.</p>
+      <h2>Se mine referencer</h2>
+      <p>Denne side er flyttet – find mine referencer og baggrund via linkene herunder.</p>
       <div class="btn-row" style="justify-content:center;">
         <a class="btn btn-accent" href="../referencer/">Referencer</a>
-        <a class="btn btn-cta" href="../kontakt/">Kontakt os</a>
+        <a class="btn btn-cta" href="../kontakt/">Kontakt mig</a>
       </div>
     </div>
   </section>

@@ -4,10 +4,10 @@ from _generate import page
 
 BOOK_TEXT = '''      <h2>Bestil tid til akupunktur i Rungsted</h2>
       <p>Hvis du er interesseret i at bestille tid til akupunktur i Rungsted, eller vil høre mere om akupunktur som behandlingsform, så er du meget velkommen til at kontakte mig for en uforpligtende samtale.</p>
-      <p>Har du yderligere spørgsmål, er du velkommen til at skrive en mail på <a href="mailto:ckuszon@akupunktoeren.com" style="color:var(--color-accent)">ckuszon@akupunktoeren.com</a> eller ringe til os på telefon 31 60 88 80.</p>
+      <p>Har du yderligere spørgsmål, er du velkommen til at skrive en mail på <a href="mailto:ckuszon@akupunktoeren.com" style="color:var(--color-accent)">ckuszon@akupunktoeren.com</a> eller ringe til mig på telefon 31 60 88 80.</p>
       <div class="btn-row article-cta">
         <a class="btn btn-accent" href="../priser/">Se priser</a>
-        <a class="btn btn-cta" href="../kontakt/">Kontakt os i dag</a>
+        <a class="btn btn-cta" href="../kontakt/">Kontakt mig i dag</a>
       </div>'''
 
 
@@ -19,7 +19,7 @@ posturologi_body = f'''  <section class="section">
 
       <h3>Kroppens stilling er ubevidst</h3>
       <p>Vore bevægelser er bevidste, men vor stilling er ubevidst. Derfor hjælper det ikke ret længe ad gangen at sige: "Ret dig op, hæng nu ikke med skuldrene, hold ikke hovedet skævt, eller få skuldrene ned på plads og slap af"! Kroppens stilling udgøres i størst grad af de toniske muskler, men også hos enkelte af nogle mekaniske forhold. Der kan have været ændringer af knoglerne i form af brud, børnelammelse, medfødte asymmetriske forhold, sammenfald i ryggen grundet osteoporose, scheurmann osv. Langt de fleste skævheder i kroppen er dog muskulære. Disse skævheder kan behandles, og de er endda den største årsag til kroniske, vedvarende eller tilbagevendende smerter.</p>
-      <p>De skeletale skævheder, som er forårsaget af posturologiske forstyrrelser som f.eks. skoliose, kan rettes over nogle få år, hvis krumningen er under 20 grader. De typiske smerter med posturologisk årsag er fx hovedpine, rygproblemer som iskias eller lumbago. Vi ser aldrig discusprolaps uden at årsagen er posturologisk. De typiske ledsmerter er skulder- og albuesmerter samt karpaltunnelsyndrom. Hoftesmerter er sjældent posturologiske, men smerter i lænd, balder, lyske og knæ er ofte forårsaget af posturologisk forstyrrelse, ligesom achillessene-problemer, hælspore og de fleste fodsmerter.</p>
+      <p>De skeletale skævheder, som er forårsaget af posturologiske forstyrrelser som f.eks. skoliose, kan rettes over nogle få år, hvis krumningen er under 20 grader. De typiske smerter med posturologisk årsag er fx hovedpine, rygproblemer som iskias eller lumbago. Jeg ser aldrig discusprolaps uden at årsagen er posturologisk. De typiske ledsmerter er skulder- og albuesmerter samt karpaltunnelsyndrom. Hoftesmerter er sjældent posturologiske, men smerter i lænd, balder, lyske og knæ er ofte forårsaget af posturologisk forstyrrelse, ligesom achillessene-problemer, hælspore og de fleste fodsmerter.</p>
 
       <h3>Posturologisk behandlingsforløb</h3>
       <p>Skævheder som skyldes en posturologisk forstyrrelse kan konstateres ved en undersøgelse. Alle muskulære skævheder kan rettes ved første behandling. For øjne og biddets funktion er gentagelse af behandlingen nødvendig, mens det for føddernes vedkommende kun er nødvendigt at kontrollere og behandle de følgevirkninger, fodstillingen har fået. Behandlingen af foden er med en sål, hvori der lægges en microchip og/eller nogle sensoriske (ikke mekaniske) tynde indlæg på 1,5 mm. Behandling af øjne er med en bestemt nordpols-magnet, akupunktur på øret, øjenøvelser eller regulering af briller. Behandling af kæbe og tænder er med akupunktur på øret eller speciel frekventeret laser lokalt, mens biddet kun kan reguleres af tandlægen.</p>
@@ -55,10 +55,10 @@ iris_body = f'''  <section class="section">
         <p>En stor fordel ved irisanalysen er, at den ofte afslører forhold, du måske har glemt at nævne, eller slet ikke er klar over. Disse oplysninger er meget værdifulde i forhold til at vælge den rette behandling til netop dig.</p>
         <p>Du kan sammenligne irisanalyse med zoneterapi – begge metoder arbejder med reflekszoner, hvor specifikke områder af kroppen afspejles et andet sted. I irisanalysen afspejles kroppen i øjet. Som man siger: øjet er sjælens spejl.</p>
         <h2>Bestil tid til Iris analyse i Rungsted</h2>
-        <p>Hvis du ønsker at bestille tid til en Iris analyse-behandling, er du velkommen til at skrive en mail på <a href="mailto:ckuszon@akupunktoeren.com" style="color:var(--color-accent)">ckuszon@akupunktoeren.com</a> eller ringe til os på telefon 31 60 88 80. Du er også meget velkommen til at kontakte mig for en uforpligtende samtale, hvis du vil høre mere om Iris analyse som behandlingsform.</p>
+        <p>Hvis du ønsker at bestille tid til en Iris analyse-behandling, er du velkommen til at skrive en mail på <a href="mailto:ckuszon@akupunktoeren.com" style="color:var(--color-accent)">ckuszon@akupunktoeren.com</a> eller ringe til mig på telefon 31 60 88 80. Du er også meget velkommen til at kontakte mig for en uforpligtende samtale, hvis du vil høre mere om Iris analyse som behandlingsform.</p>
         <div class="btn-row article-cta">
           <a class="btn btn-accent" href="../priser/">Se priser</a>
-          <a class="btn btn-cta" href="../kontakt/">Kontakt os i dag</a>
+          <a class="btn btn-cta" href="../kontakt/">Kontakt mig i dag</a>
         </div>
       </div>
       <div class="article-aside">
