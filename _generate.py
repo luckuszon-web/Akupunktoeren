@@ -112,7 +112,7 @@ def header(current):
             </div>
           </div>
         </li>
-        <li class="{'current' if current == 'akupunktoeren' else ''}"><a href="../akupunktoeren-baggrund-og-uddannelse/">Akupunktøren</a></li>
+        <li class="{'current' if current == 'akupunktoeren' else ''}"><a href="../akupunktoeren-baggrund-og-uddannelse/">Om Akupunktøren</a></li>
         <li class="{'current' if current == 'priser' else ''}"><a href="../priser/">Priser</a></li>
         <li class="has-dropdown">
           <a href="#">Apps
