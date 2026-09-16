@@ -370,6 +370,8 @@ p { margin: 0 0 1em; color: var(--color-text); }
 }
 .content-row.reverse .content-row-media { order: 2; }
 .content-row-media img {
+  width: 100%;
+  height: auto;
   border-radius: 50%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
