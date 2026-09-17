@@ -17,8 +17,8 @@ book_body = '''  <section class="section">
       <p>Akupunktur er en del af traditionel kinesisk medicin, et system, som bygger på erfaringer gjort gennem tusinder af år. De grundlæggende antagelser om kroppens energi, om balance og ubalance, har vist deres blivende værdi og gyldighed, men akupunkturvidenskaben står ikke stille. Den udvikler sig hele tiden på baggrund af nye forsøg og iagttagelser og med inddragelse af moderne teknikker som f.eks. elakupunktur og laser til at påvirke akupunkturpunkterne. Også den vestlige forskning har bidraget væsentligt til at udvikle akupunkturens teori og praksis gennem forskning i neurologi og neurofysiologi.</p>
       <p>Akupunkturklinikken bruger såvel de traditionelle kinesiske som vestlige videnskabeligt udviklede akupunkturmetoder og følger løbende med i udviklingen af terapiformerne.</p>
 
-      <h2>Bestil tid til akupunktur i Rungsted</h2>
-      <p>Hvis du er interesseret i at bestille tid til akupunktur i Rungsted, eller vil høre mere om akupunktur som behandlingsform, så er du meget velkommen til at kontakte mig for en uforpligtende samtale.</p>
+      <h2>Bestil tid til akupunktur i Rungsted/Hørsholm</h2>
+      <p>Hvis du er interesseret i at bestille tid til akupunktur i Rungsted/Hørsholm, eller vil høre mere om akupunktur som behandlingsform, så er du meget velkommen til at kontakte mig for en uforpligtende samtale.</p>
       <p>Har du yderligere spørgsmål, er du velkommen til at skrive en mail på <a href="mailto:ckuszon@akupunktoeren.com" style="color:var(--color-accent)">ckuszon@akupunktoeren.com</a> eller ringe til mig på telefon 31 60 88 80.</p>
       <div class="btn-row article-cta">
         <a class="btn btn-accent" href="../priser/">Se priser</a>
@@ -30,7 +30,7 @@ book_body = '''  <section class="section">
 page(
     "book-akupunktur",
     "Book akupunktur",
-    "Sådan foregår akupunktur hos Akupunktur Charlotte Kuszon i Rungsted – balance, helhed og en tradition der bygger på tusindvis af års erfaring.",
+    "Sådan foregår akupunktur hos Akupunktur Charlotte Kuszon i Rungsted/Hørsholm – balance, helhed og en tradition der bygger på tusindvis af års erfaring.",
     "akupunktur",
     "Akupunktur Charlotte Kuszon",
     "Book akupunktur",
@@ -53,7 +53,7 @@ ydelse_body = f'''  <section class="section">
 page(
     "ydelse",
     "Ydelser",
-    "Se mine behandlinger og priser hos Akupunktur Charlotte Kuszon i Rungsted.",
+    "Se mine behandlinger og priser hos Akupunktur Charlotte Kuszon i Rungsted/Hørsholm.",
     "priser",
     "Akupunktur Charlotte Kuszon",
     "Ydelser",

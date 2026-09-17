@@ -76,7 +76,7 @@ body = f'''  <section class="section">
 page(
     "kontakt",
     "Kontakt",
-    "Kontakt Akupunktur Charlotte Kuszon i Rungsted – book en tid eller stil et spørgsmål via formularen.",
+    "Kontakt Akupunktur Charlotte Kuszon i Rungsted/Hørsholm – book en tid eller stil et spørgsmål via formularen.",
     "kontakt",
     "Akupunktur Charlotte Kuszon",
     "Kontakt",

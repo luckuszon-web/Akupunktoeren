@@ -6,22 +6,22 @@ from _generate import page, icon
 galleri_body = '''  <section class="section">
     <div class="container">
       <h2 style="text-align:center; margin-bottom:0.4em;">Indblik i klinikken</h2>
-      <p style="text-align:center; max-width:640px; margin:0 auto 2.5rem;">Et par glimt fra Akupunkturklinik Charlotte Kuszon og de naturskønne omgivelser i Rungsted.</p>
+      <p style="text-align:center; max-width:640px; margin:0 auto 2.5rem;">Et par glimt fra Akupunkturklinik Charlotte Kuszon og de naturskønne omgivelser i Rungsted/Hørsholm.</p>
       <div class="gallery-grid">
-        <a href="../assets/images/hero.jpg" target="_blank" rel="noopener"><img src="../assets/images/hero.jpg" alt="Naturen omkring klinikken i Rungsted" loading="lazy"></a>
+        <a href="../assets/images/hero.jpg" target="_blank" rel="noopener"><img src="../assets/images/hero.jpg" alt="Naturen omkring klinikken i Rungsted/Hørsholm" loading="lazy"></a>
         <a href="../assets/images/traditions.png" target="_blank" rel="noopener"><img src="../assets/images/traditions.png" alt="Gåtur i skoven som en del af den holistiske behandling" loading="lazy"></a>
       </div>
     </div>
   </section>
 '''
-page("galleri", "Galleri", "Billeder fra Akupunkturklinik Charlotte Kuszon i Rungsted.", "", "Akupunktur Charlotte Kuszon", "Galleri", galleri_body)
+page("galleri", "Galleri", "Billeder fra Akupunkturklinik Charlotte Kuszon i Rungsted/Hørsholm.", "", "Akupunktur Charlotte Kuszon", "Galleri", galleri_body)
 
 
 # ---------------------------------------------------------------- referencer
 referencer_body = f'''  <section class="section">
     <div class="container article" style="max-width:820px;">
       <h2>Hvorfor vælge Akupunktur Charlotte Kuszon?</h2>
-      <p>Jeg har endnu ikke offentliggjort skriftlige patientudtalelser her på siden, men her er, hvorfor patienter i Rungsted og omegn vælger klinikken:</p>
+      <p>Jeg har endnu ikke offentliggjort skriftlige patientudtalelser her på siden, men her er, hvorfor patienter i Rungsted/Hørsholm og omegn vælger klinikken:</p>
       <div class="stat-grid" style="grid-template-columns:repeat(3,1fr); margin-bottom:2.5rem;">
         <div class="stat-card">
           <div class="feature-icon">{icon("check")}</div>
@@ -47,7 +47,7 @@ referencer_body = f'''  <section class="section">
     </div>
   </section>
 '''
-page("referencer", "Referencer", "Hvorfor patienter vælger Akupunktur Charlotte Kuszon i Rungsted.", "", "Akupunktur Charlotte Kuszon", "Referencer", referencer_body)
+page("referencer", "Referencer", "Hvorfor patienter vælger Akupunktur Charlotte Kuszon i Rungsted/Hørsholm.", "", "Akupunktur Charlotte Kuszon", "Referencer", referencer_body)
 
 
 # ------------------------------------------------------------------ reference
@@ -62,4 +62,4 @@ reference_body = '''  <section class="section">
     </div>
   </section>
 '''
-page("reference", "Reference", "Referencer og baggrund for Akupunktur Charlotte Kuszon i Rungsted.", "", "Akupunktur Charlotte Kuszon", "Reference", reference_body, include_cta_band=False, noindex=True)
+page("reference", "Reference", "Referencer og baggrund for Akupunktur Charlotte Kuszon i Rungsted/Hørsholm.", "", "Akupunktur Charlotte Kuszon", "Reference", reference_body, include_cta_band=False, noindex=True)

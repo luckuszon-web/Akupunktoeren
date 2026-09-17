@@ -9,8 +9,8 @@ CTA_BUTTONS = '''
     </div>'''
 
 BOOK_TEXT = '''
-    <h2>Bestil tid til akupunktur i Rungsted</h2>
-    <p>Hvis du er interesseret i at bestille tid til akupunktur i Rungsted, eller vil høre mere om akupunktur som behandlingsform, så er du meget velkommen til at kontakte mig for en uforpligtende samtale.</p>
+    <h2>Bestil tid til akupunktur i Rungsted/Hørsholm</h2>
+    <p>Hvis du er interesseret i at bestille tid til akupunktur i Rungsted/Hørsholm, eller vil høre mere om akupunktur som behandlingsform, så er du meget velkommen til at kontakte mig for en uforpligtende samtale.</p>
     <p>Har du yderligere spørgsmål, er du velkommen til at skrive en mail på <a href="mailto:ckuszon@akupunktoeren.com" style="color:var(--color-accent)">ckuszon@akupunktoeren.com</a> eller ringe til mig på telefon 31 60 88 80.</p>''' + CTA_BUTTONS
 
 
@@ -30,7 +30,7 @@ def article(slug, title, description, eyebrow, intro_html, extra_html=""):
 article(
     "smerter-og-spaendinger",
     "Smerter og spændinger",
-    "Effektiv behandling af smerter og spændinger med akupunktur hos Akupunktur Charlotte Kuszon i Rungsted.",
+    "Effektiv behandling af smerter og spændinger med akupunktur hos Akupunktur Charlotte Kuszon i Rungsted/Hørsholm.",
     "Fjernelse af smerter og spændinger med akupunktur",
     '''    <p>Smerter og spændinger i hele eller dele af kroppen kan være en stor gene i hverdagen og for nogle decideret invaliderende.</p>
     <p>Det kan være alt fra en forkert arbejdsstilling til posturologisk skævhed eller forkert brug af kroppen ved sportsudøvelse, der kan være årsag til smerterne.</p>
@@ -42,7 +42,7 @@ article(
 article(
     "hoved-og-nakke",
     "Hoved og nakke",
-    "Behandling af hovedpine, migræne og nakkesmerter med akupunktur hos Akupunktur Charlotte Kuszon i Rungsted.",
+    "Behandling af hovedpine, migræne og nakkesmerter med akupunktur hos Akupunktur Charlotte Kuszon i Rungsted/Hørsholm.",
     "Læs mere om hoved og nakke",
     '''    <p>Hovedpine, migræne, piskesmæld, nakkesmerter og -spændinger er et problem i større eller mindre grad for mange mennesker.</p>
     <p>Akupunktur kan allerede efter få behandlinger afhjælpe de værst forekommende smerter. Ved migræne bliver mange patienter helt smertefri på trods af, at det ikke er lykkedes dem med konventionel behandling og medicin.</p>
@@ -52,7 +52,7 @@ article(
 article(
     "tinnitus",
     "Tinnitus",
-    "Akupunkturbehandling af tinnitus hos Akupunktur Charlotte Kuszon i Rungsted.",
+    "Akupunkturbehandling af tinnitus hos Akupunktur Charlotte Kuszon i Rungsted/Hørsholm.",
     "Tinnitus og akupunkturbehandling",
     '''    <p>Tinnitus er en ørelidelse, der kan være invaliderende i større eller mindre omfang. Nogle patienter bemærker det stort set ikke i hverdagen, mens andre ikke kan fungere optimalt på grund af tinnitus.</p>
     <p>Jeg har rigtig gode erfaringer med at behandle tinnitus ved hjælp af akupunktur og på den måde enten få den generende lyd helt væk eller i hvert fald forbedre tilstanden væsentligt.</p>
@@ -63,7 +63,7 @@ article(
 article(
     "hoefeber",
     "Høfeber",
-    "Effektiv akupunkturbehandling mod høfeber og allergi hos Akupunktur Charlotte Kuszon i Rungsted.",
+    "Effektiv akupunkturbehandling mod høfeber og allergi hos Akupunktur Charlotte Kuszon i Rungsted/Hørsholm.",
     "Læs mere om høfeber",
     '''    <p>Høfeber, allergi over for dyr og allergi i forbindelse med luftveje generelt kan for nogle være en meget ubehagelig lidelse, hvor selv konventionel behandling og medicin ikke er nok til at holde symptomerne nede.</p>
     <p>Akupunktur er utrolig effektivt mod høfeber og allergi generelt. Faktisk så effektiv, at langt de fleste høfeberpatienter, jeg behandler med akupunktur, får det bedre eller slipper helt af med høfeberen.</p>
@@ -75,7 +75,7 @@ article(
 article(
     "idraets-skader",
     "Idrætsskader",
-    "Hurtig og effektiv akupunkturbehandling af idrætsskader hos Akupunktur Charlotte Kuszon i Rungsted.",
+    "Hurtig og effektiv akupunkturbehandling af idrætsskader hos Akupunktur Charlotte Kuszon i Rungsted/Hørsholm.",
     "Forkort skadeperioden med akupunktur",
     '''    <p>Idrætsskader som eksempelvis forstuvninger, fibersprængninger eller ondt i fødderne kan meget hurtigt udbedres med akupunktur. Den bedste effekt opnås, når du kommer samme dag eller dagen efter, skaden er sket.</p>
     <p>Det vil sige, at jo nyere skaden er, jo nemmere er den at behandle, så den efter kun ganske få dage ofte er helt væk. En forstuvning kan som hovedregel være væk efter tre dage, hvis den behandles med akupunktur med det samme.</p>
@@ -86,7 +86,7 @@ article(
 article(
     "astma",
     "Astma",
-    "Akupunkturbehandling af astma, lungeproblemer og bronkitis hos Akupunktur Charlotte Kuszon i Rungsted.",
+    "Akupunkturbehandling af astma, lungeproblemer og bronkitis hos Akupunktur Charlotte Kuszon i Rungsted/Hørsholm.",
     "Læs mere om astma",
     '''    <p>Lungeproblemer, astma og bronkitis er alle lidelser, der har betydning for vejrtrækningen og som oftest behandles med konventionel medicin. Ofte har astmapatienter også allergi.</p>
     <p>På Akupunkturklinik Charlotte Kuszon har jeg stor erfaring med behandling af astma, lungeproblemer, allergi og bronkitis, hvor akupunktur har en gavnlig effekt og er med til at forbedre lungefunktionen.</p>
@@ -98,7 +98,7 @@ article(
 article(
     "ryg-og-bevaegeapparat",
     "Ryg og bevægeapparat",
-    "Akupunkturbehandling af smerter i ryg og bevægeapparat hos Akupunktur Charlotte Kuszon i Rungsted.",
+    "Akupunkturbehandling af smerter i ryg og bevægeapparat hos Akupunktur Charlotte Kuszon i Rungsted/Hørsholm.",
     "Læs mere om ryg og bevægeapparat",
     '''    <p>En af de lidelser, jeg har allerbedst erfaringer med at behandle ved hjælp af akupunktur, er smerter i ryg og bevægeapparat. Akupunkturen kan rette op på kroppens skævheder og dermed lindre smerten. Ofte oplever jeg, at patienter, der har været plaget af smerter i mange år, ender med at blive smertefri.</p>
     <p>I det hele taget kan stort set alle former for smerter og spændinger i bevægeapparatet behandles og smertelindres væsentligt med akupunktur. Det er altid individuelt, hvor mange behandlinger der er behov for.</p>''',
@@ -119,7 +119,7 @@ article(
 article(
     "hormonforstyrrelser",
     "Hormonforstyrrelser",
-    "Holistisk akupunkturbehandling af hormonforstyrrelser hos Akupunktur Charlotte Kuszon i Rungsted.",
+    "Holistisk akupunkturbehandling af hormonforstyrrelser hos Akupunktur Charlotte Kuszon i Rungsted/Hørsholm.",
     "Læs mere om hormonforstyrrelser",
     '''    <p>Hormonel ubalance kan give fertilitetsproblemer, herunder tab af barn og dårlig sædkvalitet, og kan desuden være årsag til eksempelvis uregelmæssig menstruation, PCO og problemer i overgangsalderen.</p>
     <p>På Akupunkturklinik Charlotte Kuszon har jeg stor erfaring inden for behandling af hormonforstyrrelser med akupunktur. Jeg kan hjælpe dig med at finde tilbage til en harmonisk balance i kroppen, så du igen kan fungere normalt.</p>

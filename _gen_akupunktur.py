@@ -35,8 +35,8 @@ body = '''  <section class="section">
       <p>Efter behandlingen bliver nogle patienter trætte, og andre oplever forøget energi og livsmod. Under hele behandlingsforløbet er det vigtigt at indtage rigeligt med væske, så kroppen får hjælp til at udskille affaldsstoffer.</p>
       <p>Har du spørgsmål til behandlingsforløbet, giver jeg med glæde en nærmere forklaring.</p>
 
-      <h2>Bestil tid til akupunktur i Rungsted</h2>
-      <p>Hvis du er interesseret i at bestille tid til akupunktur i Rungsted, eller vil høre mere om akupunktur som behandlingsform, så er du meget velkommen til at kontakte mig for en uforpligtende samtale.</p>
+      <h2>Bestil tid til akupunktur i Rungsted/Hørsholm</h2>
+      <p>Hvis du er interesseret i at bestille tid til akupunktur i Rungsted/Hørsholm, eller vil høre mere om akupunktur som behandlingsform, så er du meget velkommen til at kontakte mig for en uforpligtende samtale.</p>
       <p>Har du yderligere spørgsmål, er du velkommen til at skrive en mail på <a href="mailto:ckuszon@akupunktoeren.com" style="color:var(--color-accent)">ckuszon@akupunktoeren.com</a> eller ringe til mig på telefon 31 60 88 80.</p>
       <div class="btn-row article-cta">
         <a class="btn btn-accent" href="../priser/">Se priser</a>
@@ -49,7 +49,7 @@ body = '''  <section class="section">
 page(
     "akupunktur",
     "Akupunktur",
-    "Helhedsorienteret akupunkturbehandling hos Akupunktur Charlotte Kuszon i Rungsted – smertelindring, allergi, høfeber og meget mere.",
+    "Helhedsorienteret akupunkturbehandling hos Akupunktur Charlotte Kuszon i Rungsted/Hørsholm – smertelindring, allergi, høfeber og meget mere.",
     "akupunktur",
     "Akupunktur Charlotte Kuszon",
     "Akupunktur",

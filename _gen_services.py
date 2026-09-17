@@ -2,8 +2,8 @@ import sys, os
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from _generate import page
 
-BOOK_TEXT = '''      <h2>Bestil tid til akupunktur i Rungsted</h2>
-      <p>Hvis du er interesseret i at bestille tid til akupunktur i Rungsted, eller vil høre mere om akupunktur som behandlingsform, så er du meget velkommen til at kontakte mig for en uforpligtende samtale.</p>
+BOOK_TEXT = '''      <h2>Bestil tid til akupunktur i Rungsted/Hørsholm</h2>
+      <p>Hvis du er interesseret i at bestille tid til akupunktur i Rungsted/Hørsholm, eller vil høre mere om akupunktur som behandlingsform, så er du meget velkommen til at kontakte mig for en uforpligtende samtale.</p>
       <p>Har du yderligere spørgsmål, er du velkommen til at skrive en mail på <a href="mailto:ckuszon@akupunktoeren.com" style="color:var(--color-accent)">ckuszon@akupunktoeren.com</a> eller ringe til mig på telefon 31 60 88 80.</p>
       <div class="btn-row article-cta">
         <a class="btn btn-accent" href="../priser/">Se priser</a>
@@ -42,7 +42,7 @@ posturologi_body = f'''  <section class="section">
     </div>
   </section>
 '''
-page("posturologi", "Posturologi", "Posturologi hos Akupunktur Charlotte Kuszon i Rungsted – behandling af kroppens skævheder via fødder, øjne og bid.", "posturologi", "Akupunktur Charlotte Kuszon", "Posturologi", posturologi_body)
+page("posturologi", "Posturologi", "Posturologi hos Akupunktur Charlotte Kuszon i Rungsted/Hørsholm – behandling af kroppens skævheder via fødder, øjne og bid.", "posturologi", "Akupunktur Charlotte Kuszon", "Posturologi", posturologi_body)
 
 
 # --------------------------------------------------------------- iris-analyse
@@ -54,7 +54,7 @@ iris_body = f'''  <section class="section">
         <p>Iris analyse er altid et øjebliksbillede, derfor følger jeg altid op på iris analysen.</p>
         <p>En stor fordel ved irisanalysen er, at den ofte afslører forhold, du måske har glemt at nævne, eller slet ikke er klar over. Disse oplysninger er meget værdifulde i forhold til at vælge den rette behandling til netop dig.</p>
         <p>Du kan sammenligne irisanalyse med zoneterapi – begge metoder arbejder med reflekszoner, hvor specifikke områder af kroppen afspejles et andet sted. I irisanalysen afspejles kroppen i øjet. Som man siger: øjet er sjælens spejl.</p>
-        <h2>Bestil tid til Iris analyse i Rungsted</h2>
+        <h2>Bestil tid til Iris analyse i Rungsted/Hørsholm</h2>
         <p>Hvis du ønsker at bestille tid til en Iris analyse-behandling, er du velkommen til at skrive en mail på <a href="mailto:ckuszon@akupunktoeren.com" style="color:var(--color-accent)">ckuszon@akupunktoeren.com</a> eller ringe til mig på telefon 31 60 88 80. Du er også meget velkommen til at kontakte mig for en uforpligtende samtale, hvis du vil høre mere om Iris analyse som behandlingsform.</p>
         <div class="btn-row article-cta">
           <a class="btn btn-accent" href="../priser/">Se priser</a>
@@ -69,7 +69,7 @@ iris_body = f'''  <section class="section">
     </div>
   </section>
 '''
-page("iris-analyse", "Iris analyse", "Iris analyse hos Akupunktur Charlotte Kuszon i Rungsted – en diagnosemetode der bruger øjets struktur til at afsløre kroppens ubalancer.", "iris-analyse", "Akupunktur Charlotte Kuszon", "Iris analyse", iris_body)
+page("iris-analyse", "Iris analyse", "Iris analyse hos Akupunktur Charlotte Kuszon i Rungsted/Hørsholm – en diagnosemetode der bruger øjets struktur til at afsløre kroppens ubalancer.", "iris-analyse", "Akupunktur Charlotte Kuszon", "Iris analyse", iris_body)
 
 
 # -------------------------------------------------------------------- healing
@@ -96,7 +96,7 @@ healing_body = f'''  <section class="section">
     </div>
   </section>
 '''
-page("healing", "Healing", "Healing-behandling hos Akupunktur Charlotte Kuszon i Rungsted – healing kombineret med akupunktur mod smerter og skævheder.", "healing", "Akupunktur Charlotte Kuszon", "Healing", healing_body)
+page("healing", "Healing", "Healing-behandling hos Akupunktur Charlotte Kuszon i Rungsted/Hørsholm – healing kombineret med akupunktur mod smerter og skævheder.", "healing", "Akupunktur Charlotte Kuszon", "Healing", healing_body)
 
 
 # ---------------------------------------------------------------- fjernhealing
