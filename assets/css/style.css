@@ -152,8 +152,11 @@ p { margin: 0 0 1em; color: var(--color-text); }
   flex-shrink: 0;
 }
 .logo img {
-  height: 72px;
+  height: 96px;
   width: auto;
+}
+@media (max-width: 600px) {
+  .logo img { height: 72px; }
 }
 
 .nav { display: flex; align-items: center; gap: 1.75rem; }
