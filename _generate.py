@@ -164,7 +164,8 @@ def header(current):
 '''
 
 
-FOOTER = f'''<footer class="site-footer">
+def footer(prefix="../"):
+    return f'''<footer class="site-footer">
   <div class="container footer-grid">
     <div>
       <h4>Firmainformation</h4>
@@ -196,6 +197,10 @@ FOOTER = f'''<footer class="site-footer">
         Alle hverdage mellem 8 – 17
       </p>
     </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>&copy; 2026 Akupunktur Charlotte Kuszon</p>
+    <a href="{prefix}privatlivspolitik/">Cookie- og privatlivspolitik</a>
   </div>
 </footer>
 '''
@@ -293,7 +298,7 @@ def page(slug, title, description, current, banner_eyebrow, banner_title, body, 
 <meta name="twitter:description" content="{description}">
 <meta name="twitter:image" content="{SITE_URL}/assets/images/hero.jpg">
 <link rel="icon" href="../assets/images/favicon.png">
-<link rel="stylesheet" href="../assets/css/style.css?v=12">
+<link rel="stylesheet" href="../assets/css/style.css?v=13">
 {LOCAL_BUSINESS_SCHEMA}
 </head>
 <body>
@@ -307,7 +312,7 @@ def page(slug, title, description, current, banner_eyebrow, banner_title, body, 
 {cta}
 </main>
 
-{FOOTER}
+{footer()}
 {SCRIPT}
 </body>
 </html>

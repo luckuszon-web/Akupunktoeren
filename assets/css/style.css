@@ -472,6 +472,24 @@ p { margin: 0 0 1em; color: var(--color-text); }
   .footer-grid li { justify-content: center; }
 }
 
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.85rem;
+}
+.footer-bottom p { margin: 0; }
+.footer-bottom a:hover { color: var(--color-white); }
+
+@media (max-width: 780px) {
+  .footer-bottom { justify-content: center; text-align: center; }
+}
+
 /* -------------------- article / simple content page -------------------- */
 .article {
   max-width: 760px;

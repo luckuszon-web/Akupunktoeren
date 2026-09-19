@@ -37,6 +37,10 @@ Kontaktformularen på `/kontakt/` sender direkte til Formspree — ingen backend
 
 Formspree-kontoen skal selv konfigureres til at sende notifikationer til ckuszon@akupunktoeren.com under formularens indstillinger på formspree.io. Formspree kræver typisk, at den første rigtige indsendelse bekræftes via email, før formularen er fuldt aktiveret.
 
+## Cookie- og privatlivspolitik
+
+`/privatlivspolitik/` (genereret af `_gen_privatlivspolitik.py`) beskriver, hvilke oplysninger der indsamles via kontaktformularen, at Formspree er databehandler, og at sitet ikke selv sætter analyse- eller marketing-cookies (derfor intet cookie-banner). Der er et link til siden nederst i footeren på alle sider (tilføjet i `footer()` i `_generate.py`). Hvis der på et tidspunkt tilføjes analytics, marketing-pixels eller andre cookies, skal både denne side og cookie-afsnittet opdateres, og der skal sandsynligvis tilføjes et cookie-samtykke-banner.
+
 ## SEO
 
 - `robots.txt` og `sitemap.xml` ligger i rodmappen. Kør `python3 _gen_sitemap.py` for at genskabe sitemap.xml, hvis en side tilføjes/fjernes eller dens noindex-status ændres (listen over sider holdes manuelt i toppen af scriptet).

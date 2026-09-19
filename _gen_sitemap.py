@@ -26,6 +26,7 @@ SLUGS = [
     "kursus-i-skovhealing-og-meditation",
     "posturologi",
     "priser",
+    "privatlivspolitik",
     "referencer",
     "ryg-og-bevaegeapparat",
     "smerter-og-spaendinger",
