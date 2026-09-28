@@ -28,8 +28,9 @@ body = '''  <section class="section">
       <p>Jeg opbevarer henvendelser og eventuelle patientoplysninger, så længe det er nødvendigt for at kunne besvare din henvendelse eller gennemføre din behandling, og i øvrigt så længe lovgivningen kræver det – f.eks. bogføringslovens krav om opbevaring af regnskabsbilag i 5 år.</p>
 
       <h2>Cookies</h2>
-      <p>Denne hjemmeside sætter ikke selv cookies til statistik, analyse eller markedsføring. Der bruges ingen cookie-banner, fordi der ikke indsamles data på den måde.</p>
+      <p>Denne hjemmeside sætter ikke selv cookies til statistik, analyse eller markedsføring.</p>
       <p>Formspree kan som databehandler af kontaktformularen sætte tekniske cookies, der er nødvendige for, at formularen kan fungere og beskytte mod spam. Min hostingudbyder kan desuden registrere tekniske oplysninger som IP-adresse i driftslogs, hvilket er normal praksis for at holde en hjemmeside sikker og kørende.</p>
+      <p>Fordi disse cookies er strengt nødvendige for, at kontaktformularen kan fungere, kræver de ikke dit samtykke efter cookiebekendtgørelsen. Den lille infoboks nederst på siden er derfor kun en oplysning om, hvilke cookies der bruges – ikke et samtykke, du skal give, før siden virker. Boksen gemmer et lille flag i din browsers lokale lager (localStorage), så du ikke ser den igen, når du har trykket OK.</p>
 
       <h2>Dine rettigheder</h2>
       <p>Efter databeskyttelsesforordningen har du en række rettigheder i forhold til de oplysninger, jeg har om dig:</p>

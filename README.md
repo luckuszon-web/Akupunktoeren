@@ -39,7 +39,11 @@ Formspree-kontoen skal selv konfigureres til at sende notifikationer til ckuszon
 
 ## Cookie- og privatlivspolitik
 
-`/privatlivspolitik/` (genereret af `_gen_privatlivspolitik.py`) beskriver, hvilke oplysninger der indsamles via kontaktformularen, at Formspree er databehandler, og at sitet ikke selv sætter analyse- eller marketing-cookies (derfor intet cookie-banner). Der er et link til siden nederst i footeren på alle sider (tilføjet i `footer()` i `_generate.py`). Hvis der på et tidspunkt tilføjes analytics, marketing-pixels eller andre cookies, skal både denne side og cookie-afsnittet opdateres, og der skal sandsynligvis tilføjes et cookie-samtykke-banner.
+`/privatlivspolitik/` (genereret af `_gen_privatlivspolitik.py`) beskriver, hvilke oplysninger der indsamles via kontaktformularen, at Formspree er databehandler, og hvilke cookies der bruges. Der er et link til siden nederst i footeren på alle sider (`footer()` i `_generate.py`).
+
+En lille cookie-boks (`cookie_banner()` i `_generate.py`, CSS-klasse `.cookie-banner`) vises nederst på skærmen ved første besøg, med en kort forklaring og en "OK"-knap. Den bruger `localStorage` (nøgle `cookie-consent-ack`) til at huske, at man har trykket OK, så den ikke vises igen i samme browser. De eneste cookies på sitet i dag er Formsprees egne, strengt nødvendige cookies til kontaktformularen (spam-beskyttelse), som ikke kræver samtykke efter cookiebekendtgørelsen — boksen er derfor en oplysning, ikke et egentligt samtykke-flow med fravælgelige kategorier.
+
+Hvis der på et tidspunkt tilføjes analytics, marketing-pixels eller andre ikke-nødvendige cookies, skal både `/privatlivspolitik/`, cookie-boksens tekst og selve samtykke-logikken opdateres (så ikke-nødvendige cookies først sættes, efter brugeren aktivt har accepteret dem).
 
 ## SEO
 

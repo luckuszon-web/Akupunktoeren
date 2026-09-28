@@ -205,6 +205,15 @@ def footer(prefix="../"):
 </footer>
 '''
 
+
+def cookie_banner(prefix="../"):
+    return f'''<div class="cookie-banner" id="cookieBanner" hidden>
+  <p>Denne hjemmeside bruger kun nødvendige cookies, der får kontaktformularen til at virke og beskytter den mod spam. Der bruges ingen cookies til analyse eller markedsføring. <a href="{prefix}privatlivspolitik/">Læs mere</a>.</p>
+  <button class="btn btn-cta" id="cookieBannerOk" type="button">OK</button>
+</div>
+'''
+
+
 SCRIPT = '''<script>
 (function () {
   var toggle = document.getElementById('navToggle');
@@ -222,6 +231,19 @@ SCRIPT = '''<script>
         link.parentElement.classList.toggle('is-open');
       }
     });
+  });
+})();
+(function () {
+  var KEY = 'cookie-consent-ack';
+  var banner = document.getElementById('cookieBanner');
+  var okBtn = document.getElementById('cookieBannerOk');
+  if (!banner || !okBtn) return;
+  var acknowledged = false;
+  try { acknowledged = !!localStorage.getItem(KEY); } catch (e) {}
+  if (!acknowledged) banner.hidden = false;
+  okBtn.addEventListener('click', function () {
+    banner.hidden = true;
+    try { localStorage.setItem(KEY, '1'); } catch (e) {}
   });
 })();
 </script>
@@ -298,7 +320,7 @@ def page(slug, title, description, current, banner_eyebrow, banner_title, body, 
 <meta name="twitter:description" content="{description}">
 <meta name="twitter:image" content="{SITE_URL}/assets/images/hero.jpg">
 <link rel="icon" href="../assets/images/favicon.png">
-<link rel="stylesheet" href="../assets/css/style.css?v=13">
+<link rel="stylesheet" href="../assets/css/style.css?v=14">
 {LOCAL_BUSINESS_SCHEMA}
 </head>
 <body>
@@ -313,6 +335,7 @@ def page(slug, title, description, current, banner_eyebrow, banner_title, body, 
 </main>
 
 {footer()}
+{cookie_banner()}
 {SCRIPT}
 </body>
 </html>
