@@ -111,7 +111,7 @@ def header(current):
 
 <header class="site-header">
   <div class="container">
-    <a class="logo" href="../index.html" aria-label="Akupunktur Charlotte Kuszon – forside">
+    <a class="logo" href="../" aria-label="Akupunktur Charlotte Kuszon – forside">
       <img src="../assets/images/logo.png" alt="Akupunktur Charlotte Kuszon logo" width="64" height="64">
     </a>
 
@@ -122,7 +122,7 @@ def header(current):
 
     <nav class="nav" id="siteNav">
       <ul class="nav-list">
-        <li class="{'current' if current == 'forside' else ''}"><a href="../index.html">Forside</a></li>
+        <li class="{'current' if current == 'forside' else ''}"><a href="../">Forside</a></li>
         <li class="{behandlinger_class}">
           <a href="#">Behandlinger
             {icon("chevron-down", style="width:.7em;height:.7em")}

@@ -71,7 +71,7 @@ tak_body = f'''  <section class="section">
       <p>Hvis du ønsker at bestille tid til en akupunkturbehandling, er du velkommen til at skrive en mail på <a href="mailto:ckuszon@akupunktoeren.com" style="color:var(--color-accent)">ckuszon@akupunktoeren.com</a> eller ringe til mig på telefon 31 60 88 80.</p>
       <p>Du er også meget velkommen til at kontakte mig for en uforpligtende samtale, hvis du vil høre mere om akupunktur som behandlingsform.</p>
       <div class="btn-row" style="justify-content:center;">
-        <a class="btn btn-accent" href="../index.html">Til forsiden</a>
+        <a class="btn btn-accent" href="../">Til forsiden</a>
         <a class="btn btn-cta" href="tel:+4531608880">Ring 31 60 88 80</a>
       </div>
     </div>
