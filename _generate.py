@@ -75,16 +75,16 @@ BEHANDLINGER_OTHER = [
 BEHANDLINGER_ALL = [s for s, _ in BEHANDLINGER_COND] + [s for s, _ in BEHANDLINGER_OTHER] + ["akupunktur"]
 
 
-def header(current):
+def header(current, prefix="../"):
     def cur(slug):
         return " current" if slug == current else ""
 
     cond_items = "\n".join(
-        f'                <li><a href="../{slug}/">{label}</a></li>'
+        f'                <li><a href="{prefix}{slug}/">{label}</a></li>'
         for slug, label in BEHANDLINGER_COND
     )
     other_items = "\n".join(
-        f'                <li><a href="../{slug}/">{label}</a></li>'
+        f'                <li><a href="{prefix}{slug}/">{label}</a></li>'
         for slug, label in BEHANDLINGER_OTHER
     )
     behandlinger_class = "has-dropdown has-mega"
@@ -111,8 +111,8 @@ def header(current):
 
 <header class="site-header">
   <div class="container">
-    <a class="logo" href="../" aria-label="Akupunktur Charlotte Kuszon – forside">
-      <img src="../assets/images/logo.png" alt="Akupunktur Charlotte Kuszon logo" width="64" height="64">
+    <a class="logo" href="{prefix}" aria-label="Akupunktur Charlotte Kuszon – forside">
+      <img src="{prefix}assets/images/logo.png" alt="Akupunktur Charlotte Kuszon logo" width="64" height="64">
     </a>
 
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="siteNav" aria-label="Åbn menu">
@@ -122,14 +122,14 @@ def header(current):
 
     <nav class="nav" id="siteNav">
       <ul class="nav-list">
-        <li class="{'current' if current == 'forside' else ''}"><a href="../">Forside</a></li>
+        <li class="{'current' if current == 'forside' else ''}"><a href="{prefix}">Forside</a></li>
         <li class="{behandlinger_class}">
           <a href="#">Behandlinger
             {icon("chevron-down", style="width:.7em;height:.7em")}
           </a>
           <div class="dropdown dropdown-mega">
             <div class="dropdown-col">
-              <p class="dropdown-heading"><a href="../akupunktur/">Akupunktur for</a></p>
+              <p class="dropdown-heading"><a href="{prefix}akupunktur/">Akupunktur for</a></p>
               <ul>
 {cond_items}
               </ul>
@@ -142,9 +142,9 @@ def header(current):
             </div>
           </div>
         </li>
-        <li class="{'current' if current == 'akupunktoeren' else ''}"><a href="../akupunktoeren-baggrund-og-uddannelse/">Om Akupunktøren</a></li>
-        <li class="{'current' if current == 'priser' else ''}"><a href="../priser/">Priser</a></li>
-        <li class="{'current' if current == 'blog' else ''}"><a href="../blog/">Blog</a></li>
+        <li class="{'current' if current == 'akupunktoeren' else ''}"><a href="{prefix}akupunktoeren-baggrund-og-uddannelse/">Om Akupunktøren</a></li>
+        <li class="{'current' if current == 'priser' else ''}"><a href="{prefix}priser/">Priser</a></li>
+        <li class="{'current' if current == 'blog' else ''}"><a href="{prefix}blog/">Blog</a></li>
         <li class="has-dropdown">
           <a href="#">Apps
             {icon("chevron-down", style="width:.7em;height:.7em")}
@@ -156,7 +156,7 @@ def header(current):
         </li>
       </ul>
       <div class="nav-cta">
-        <a class="btn btn-cta" href="../kontakt/">Kontakt</a>
+        <a class="btn btn-cta" href="{prefix}kontakt/">Kontakt</a>
       </div>
     </nav>
   </div>
@@ -344,7 +344,7 @@ def page_banner(eyebrow, title, extra_contact=True):
 '''
 
 
-def page(slug, title, description, current, banner_eyebrow, banner_title, body, include_cta_band=True, noindex=False, og_type="website", extra_head=""):
+def page(slug, title, description, current, banner_eyebrow, banner_title, body, include_cta_band=True, noindex=False, og_type="website", extra_head="", prefix="../"):
     cta = CTA_BAND if include_cta_band else ""
     full_title = f"{title} | Akupunktur Charlotte Kuszon"
     canonical = f"{SITE_URL}/{slug}/"
@@ -367,14 +367,14 @@ def page(slug, title, description, current, banner_eyebrow, banner_title, body, 
 <meta name="twitter:title" content="{full_title}">
 <meta name="twitter:description" content="{description}">
 <meta name="twitter:image" content="{SITE_URL}/assets/images/hero.jpg">
-<link rel="icon" href="../assets/images/favicon.png">
-<link rel="stylesheet" href="../assets/css/style.css?v=17">
+<link rel="icon" href="{prefix}assets/images/favicon.png">
+<link rel="stylesheet" href="{prefix}assets/css/style.css?v=17">
 {LOCAL_BUSINESS_SCHEMA}
 {extra_head}</head>
 <body>
 <a class="skip-link" href="#main">Spring til indhold</a>
 
-{header(current)}
+{header(current, prefix)}
 <main id="main">
 
 {page_banner(banner_eyebrow, banner_title)}
@@ -382,8 +382,8 @@ def page(slug, title, description, current, banner_eyebrow, banner_title, body, 
 {cta}
 </main>
 
-{footer()}
-{cookie_banner()}
+{footer(prefix)}
+{cookie_banner(prefix)}
 {SCRIPT}
 </body>
 </html>

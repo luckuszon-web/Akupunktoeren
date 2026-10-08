@@ -546,6 +546,8 @@ p { margin: 0 0 1em; color: var(--color-text); }
   border-radius: 50%;
   background: var(--color-accent);
 }
+.article ol.article-steps { margin: 0 0 1.5rem 1.2rem; padding: 0; }
+.article ol.article-steps li { margin-bottom: 0.5em; color: var(--color-text); padding-left: 0.3em; }
 .article-cta { margin-top: 2rem; }
 
 /* two-column article variant (text + side list/box) */

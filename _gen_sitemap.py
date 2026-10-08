@@ -15,6 +15,7 @@ SLUGS = [
     "akupunktur",
     "astma",
     "blog",
+    "blog/hvad-koster-akupunktur",
     "book-akupunktur",
     "fjernhealing",
     "galleri",
