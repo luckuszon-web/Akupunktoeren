@@ -3,7 +3,8 @@
 (`python3 _gen_sitemap.py`) whenever a page is added, removed, or its
 noindex status changes. Excludes pages marked noindex in their own
 _gen_*.py page() call (thin/utility pages: ydelse, reference,
-tak-for-din-henvendelse)."""
+tak-for-din-henvendelse). When a new blog post is published via
+_gen_blog.py, add its slug here too, as "blog/<slug>"."""
 import os
 from _generate import SITE_URL, ROOT
 
@@ -13,6 +14,7 @@ SLUGS = [
     "akupunktoeren-baggrund-og-uddannelse",
     "akupunktur",
     "astma",
+    "blog",
     "book-akupunktur",
     "fjernhealing",
     "galleri",

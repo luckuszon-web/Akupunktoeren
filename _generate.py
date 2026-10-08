@@ -144,6 +144,7 @@ def header(current):
         </li>
         <li class="{'current' if current == 'akupunktoeren' else ''}"><a href="../akupunktoeren-baggrund-og-uddannelse/">Om Akupunktøren</a></li>
         <li class="{'current' if current == 'priser' else ''}"><a href="../priser/">Priser</a></li>
+        <li class="{'current' if current == 'blog' else ''}"><a href="../blog/">Blog</a></li>
         <li class="has-dropdown">
           <a href="#">Apps
             {icon("chevron-down", style="width:.7em;height:.7em")}
@@ -343,7 +344,7 @@ def page_banner(eyebrow, title, extra_contact=True):
 '''
 
 
-def page(slug, title, description, current, banner_eyebrow, banner_title, body, include_cta_band=True, noindex=False):
+def page(slug, title, description, current, banner_eyebrow, banner_title, body, include_cta_band=True, noindex=False, og_type="website", extra_head=""):
     cta = CTA_BAND if include_cta_band else ""
     full_title = f"{title} | Akupunktur Charlotte Kuszon"
     canonical = f"{SITE_URL}/{slug}/"
@@ -356,7 +357,7 @@ def page(slug, title, description, current, banner_eyebrow, banner_title, body, 
 <title>{full_title}</title>
 <meta name="description" content="{description}">
 {robots_tag}<link rel="canonical" href="{canonical}">
-<meta property="og:type" content="website">
+<meta property="og:type" content="{og_type}">
 <meta property="og:locale" content="da_DK">
 <meta property="og:title" content="{full_title}">
 <meta property="og:description" content="{description}">
@@ -367,9 +368,9 @@ def page(slug, title, description, current, banner_eyebrow, banner_title, body, 
 <meta name="twitter:description" content="{description}">
 <meta name="twitter:image" content="{SITE_URL}/assets/images/hero.jpg">
 <link rel="icon" href="../assets/images/favicon.png">
-<link rel="stylesheet" href="../assets/css/style.css?v=16">
+<link rel="stylesheet" href="../assets/css/style.css?v=17">
 {LOCAL_BUSINESS_SCHEMA}
-</head>
+{extra_head}</head>
 <body>
 <a class="skip-link" href="#main">Spring til indhold</a>
 
