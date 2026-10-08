@@ -16,21 +16,25 @@ body = '''  <section class="section">
         <li>Email-adresse</li>
         <li>Indholdet af din besked</li>
       </ul>
-      <p>Jeg indsamler ikke oplysninger via cookies, sporing eller analyseværktøjer – se afsnittet om cookies herunder.</p>
+      <p>Hvis du accepterer markedsføringscookies i cookie-boksen, indsamles der desuden oplysninger via Google Ads til konverteringssporing – se afsnittet om cookies herunder.</p>
 
       <h2>Formål og retsgrundlag</h2>
       <p>Oplysningerne bruges udelukkende til at besvare din henvendelse og eventuelt aftale eller gennemføre en behandling. Retsgrundlaget er dit samtykke ved at sende formularen (databeskyttelsesforordningens artikel 6, stk. 1, litra a) samt, hvis der indgås en behandlingsaftale, opfyldelse af aftalen (artikel 6, stk. 1, litra b).</p>
 
       <h2>Tredjeparter</h2>
-      <p>Kontaktformularen leveres af tjenesten Formspree, som modtager og videresender din besked til min email. Formspree er en databehandler, der opbevarer oplysningerne på servere uden for EU/EØS. Du kan læse mere om Formsprees behandling af data på <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener" style="color:var(--color-accent)">formspree.io</a>. Jeg deler ikke dine oplysninger med andre tredjeparter, og oplysningerne bruges ikke til markedsføring.</p>
+      <p>Kontaktformularen leveres af tjenesten Formspree, som modtager og videresender din besked til min email. Formspree er en databehandler, der opbevarer oplysningerne på servere uden for EU/EØS. Du kan læse mere om Formsprees behandling af data på <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener" style="color:var(--color-accent)">formspree.io</a>.</p>
+      <p>Hvis du accepterer markedsføringscookies, bruges desuden Google Ads (Google Ireland Limited/Google LLC) til at måle, om annoncer fører til henvendelser (konverteringssporing). Google kan behandle oplysninger uden for EU/EØS. Du kan læse mere om Googles databehandling på <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" style="color:var(--color-accent)">policies.google.com/privacy</a>. Jeg deler ikke dine oplysninger med andre tredjeparter, og de bruges ikke til andre former for markedsføring.</p>
 
       <h2>Opbevaring af oplysninger</h2>
       <p>Jeg opbevarer henvendelser og eventuelle patientoplysninger, så længe det er nødvendigt for at kunne besvare din henvendelse eller gennemføre din behandling, og i øvrigt så længe lovgivningen kræver det – f.eks. bogføringslovens krav om opbevaring af regnskabsbilag i 5 år.</p>
 
       <h2>Cookies</h2>
-      <p>Denne hjemmeside sætter ikke selv cookies til statistik, analyse eller markedsføring.</p>
-      <p>Formspree kan som databehandler af kontaktformularen sætte tekniske cookies, der er nødvendige for, at formularen kan fungere og beskytte mod spam. Min hostingudbyder kan desuden registrere tekniske oplysninger som IP-adresse i driftslogs, hvilket er normal praksis for at holde en hjemmeside sikker og kørende.</p>
-      <p>Fordi disse cookies er strengt nødvendige for, at kontaktformularen kan fungere, kræver de ikke dit samtykke efter cookiebekendtgørelsen. Den lille infoboks nederst på siden er derfor kun en oplysning om, hvilke cookies der bruges – ikke et samtykke, du skal give, før siden virker. Boksen gemmer et lille flag i din browsers lokale lager (localStorage), så du ikke ser den igen, når du har trykket OK.</p>
+      <p>Cookie-boksen nederst på siden lader dig vælge mellem to typer cookies:</p>
+      <ul class="plain-list">
+        <li><strong>Nødvendige cookies</strong> – sættes af Formspree, så kontaktformularen kan fungere og beskyttes mod spam. Min hostingudbyder kan desuden registrere tekniske oplysninger som IP-adresse i driftslogs, hvilket er normal praksis for at holde en hjemmeside sikker og kørende. Disse er strengt nødvendige og kræver ikke samtykke, og sættes derfor altid.</li>
+        <li><strong>Markedsføringscookies</strong> – sættes af Google Ads og bruges til at måle, om vores annoncer fører til henvendelser (konverteringssporing). Disse sættes først, hvis du trykker "Accepter alle" i cookie-boksen.</li>
+      </ul>
+      <p>Vælger du "Kun nødvendige", sættes markedsføringscookies ikke. Dit valg gemmes i din browsers lokale lager (localStorage), så du ikke ser boksen igen i samme browser. Du kan til enhver tid ændre dit valg ved at slette browserens lokale lager for siden og genindlæse den.</p>
 
       <h2>Dine rettigheder</h2>
       <p>Efter databeskyttelsesforordningen har du en række rettigheder i forhold til de oplysninger, jeg har om dig:</p>

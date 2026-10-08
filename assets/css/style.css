@@ -512,11 +512,13 @@ p { margin: 0 0 1em; color: var(--color-text); }
 .cookie-banner[hidden] { display: none; }
 .cookie-banner p { margin: 0; font-size: 0.85rem; flex: 1 1 260px; }
 .cookie-banner a { color: var(--color-cta); text-decoration: underline; }
-.cookie-banner .btn { flex-shrink: 0; }
+.cookie-banner-actions { display: flex; gap: 0.6rem; flex-shrink: 0; flex-wrap: wrap; }
+.cookie-banner-actions .btn { flex-shrink: 0; white-space: nowrap; }
 
 @media (max-width: 600px) {
   .cookie-banner { left: 0.75rem; right: 0.75rem; bottom: 0.75rem; padding: 1rem; }
-  .cookie-banner .btn { width: 100%; text-align: center; }
+  .cookie-banner-actions { width: 100%; }
+  .cookie-banner-actions .btn { flex: 1 1 0; text-align: center; }
 }
 
 /* -------------------- article / simple content page -------------------- */

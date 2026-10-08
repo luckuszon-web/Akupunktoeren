@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="Akupunkturbehandling af tinnitus hos Akupunktur Charlotte Kuszon i Rungsted/Hørsholm.">
 <meta name="twitter:image" content="https://akupunktoeren.com/assets/images/hero.jpg">
 <link rel="icon" href="../assets/images/favicon.png">
-<link rel="stylesheet" href="../assets/css/style.css?v=14">
+<link rel="stylesheet" href="../assets/css/style.css?v=15">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -233,8 +233,11 @@
 </footer>
 
 <div class="cookie-banner" id="cookieBanner" hidden>
-  <p>Denne hjemmeside bruger kun nødvendige cookies, der får kontaktformularen til at virke og beskytter den mod spam. Der bruges ingen cookies til analyse eller markedsføring. <a href="../privatlivspolitik/">Læs mere</a>.</p>
-  <button class="btn btn-cta" id="cookieBannerOk" type="button">OK</button>
+  <p>Denne hjemmeside bruger nødvendige cookies (bl.a. til kontaktformularen) samt cookies til markedsføring (Google Ads), hvis du accepterer det. <a href="../privatlivspolitik/">Læs mere</a>.</p>
+  <div class="cookie-banner-actions">
+    <button class="btn btn-outline" id="cookieBannerReject" type="button">Kun nødvendige</button>
+    <button class="btn btn-cta" id="cookieBannerAccept" type="button">Accepter alle</button>
+  </div>
 </div>
 
 <script>
@@ -257,16 +260,44 @@
   });
 })();
 (function () {
-  var KEY = 'cookie-consent-ack';
+  var KEY = 'cookie-consent';
+  var GOOGLE_ADS_ID = 'AW-1065423115';
+
+  function loadGoogleAds() {
+    if (window.__googleAdsLoaded) return;
+    window.__googleAdsLoaded = true;
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = window.gtag || function () { dataLayer.push(arguments); };
+    gtag('js', new Date());
+    gtag('config', GOOGLE_ADS_ID);
+    var script = document.createElement('script');
+    script.async = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=' + GOOGLE_ADS_ID;
+    document.head.appendChild(script);
+  }
+
   var banner = document.getElementById('cookieBanner');
-  var okBtn = document.getElementById('cookieBannerOk');
-  if (!banner || !okBtn) return;
-  var acknowledged = false;
-  try { acknowledged = !!localStorage.getItem(KEY); } catch (e) {}
-  if (!acknowledged) banner.hidden = false;
-  okBtn.addEventListener('click', function () {
+  var acceptBtn = document.getElementById('cookieBannerAccept');
+  var rejectBtn = document.getElementById('cookieBannerReject');
+  if (!banner || !acceptBtn || !rejectBtn) return;
+
+  var consent = null;
+  try { consent = localStorage.getItem(KEY); } catch (e) {}
+
+  if (consent === 'accepted') {
+    loadGoogleAds();
+  } else if (consent !== 'rejected') {
+    banner.hidden = false;
+  }
+
+  acceptBtn.addEventListener('click', function () {
     banner.hidden = true;
-    try { localStorage.setItem(KEY, '1'); } catch (e) {}
+    try { localStorage.setItem(KEY, 'accepted'); } catch (e) {}
+    loadGoogleAds();
+  });
+  rejectBtn.addEventListener('click', function () {
+    banner.hidden = true;
+    try { localStorage.setItem(KEY, 'rejected'); } catch (e) {}
   });
 })();
 </script>

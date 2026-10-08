@@ -41,9 +41,12 @@ Formspree-kontoen skal selv konfigureres til at sende notifikationer til ckuszon
 
 `/privatlivspolitik/` (genereret af `_gen_privatlivspolitik.py`) beskriver, hvilke oplysninger der indsamles via kontaktformularen, at Formspree er databehandler, og hvilke cookies der bruges. Der er et link til siden nederst i footeren på alle sider (`footer()` i `_generate.py`).
 
-En lille cookie-boks (`cookie_banner()` i `_generate.py`, CSS-klasse `.cookie-banner`) vises nederst på skærmen ved første besøg, med en kort forklaring og en "OK"-knap. Den bruger `localStorage` (nøgle `cookie-consent-ack`) til at huske, at man har trykket OK, så den ikke vises igen i samme browser. De eneste cookies på sitet i dag er Formsprees egne, strengt nødvendige cookies til kontaktformularen (spam-beskyttelse), som ikke kræver samtykke efter cookiebekendtgørelsen — boksen er derfor en oplysning, ikke et egentligt samtykke-flow med fravælgelige kategorier.
+En cookie-boks (`cookie_banner()` i `_generate.py`, CSS-klasse `.cookie-banner`) vises nederst på skærmen ved første besøg, med en kort forklaring og to knapper: "Kun nødvendige" og "Accepter alle". Valget gemmes i `localStorage` (nøgle `cookie-consent`, værdi `accepted`/`rejected`), så boksen ikke vises igen i samme browser.
 
-Hvis der på et tidspunkt tilføjes analytics, marketing-pixels eller andre ikke-nødvendige cookies, skal både `/privatlivspolitik/`, cookie-boksens tekst og selve samtykke-logikken opdateres (så ikke-nødvendige cookies først sættes, efter brugeren aktivt har accepteret dem).
+- **Nødvendige cookies** (Formsprees egne, til kontaktformularen/spam-beskyttelse) sættes altid — de kræver ikke samtykke efter cookiebekendtgørelsen.
+- **Google Ads** (konverteringssporing, annonce-id `AW-1065423115`) indlæses *først*, når brugeren trykker "Accepter alle" — scriptet injiceres dynamisk via JS (`loadGoogleAds()` i `SCRIPT`-blokken i `_generate.py`) og ligger ikke som et statisk `<script src>` i `<head>`, netop for at undgå at sætte markedsføringscookies, før der er givet aktivt samtykke. Vælger brugeren "Kun nødvendige", indlæses Google Ads slet ikke.
+
+Hvis der tilføjes flere ikke-nødvendige cookies/scripts (analytics, andre annoncenetværk osv.), skal de hægtes på samme `loadGoogleAds()`-mønster (kun indlæst efter accept) og beskrives i `/privatlivspolitik/`.
 
 ## SEO
 
