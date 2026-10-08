@@ -76,6 +76,17 @@ tak_body = f'''  <section class="section">
       </div>
     </div>
   </section>
+  <script>
+  document.addEventListener('DOMContentLoaded', function () {{
+    if (typeof gtag === 'function') {{
+      gtag('event', 'conversion', {{
+        'send_to': 'AW-1065423115/aunPCOCE8pUdEIuihPwD',
+        'value': 1.0,
+        'currency': 'DKK'
+      }});
+    }}
+  }});
+  </script>
 '''
 page(
     "tak-for-din-henvendelse",
