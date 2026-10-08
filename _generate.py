@@ -280,6 +280,19 @@ SCRIPT = '''<script>
     try { localStorage.setItem(KEY, 'rejected'); } catch (e) {}
   });
 })();
+(function () {
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest && e.target.closest('a[href^="tel:"]');
+    if (!link) return;
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-1065423115/5sDICPuq8ZUdEIuihPwD',
+        'value': 1.0,
+        'currency': 'DKK'
+      });
+    }
+  });
+})();
 </script>
 '''
 
@@ -354,7 +367,7 @@ def page(slug, title, description, current, banner_eyebrow, banner_title, body, 
 <meta name="twitter:description" content="{description}">
 <meta name="twitter:image" content="{SITE_URL}/assets/images/hero.jpg">
 <link rel="icon" href="../assets/images/favicon.png">
-<link rel="stylesheet" href="../assets/css/style.css?v=15">
+<link rel="stylesheet" href="../assets/css/style.css?v=16">
 {LOCAL_BUSINESS_SCHEMA}
 </head>
 <body>

@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="Kurser i skovhealing og meditation hos Charlotte Kuszon – lær at trække energi fra naturen og åbne dine chakraer.">
 <meta name="twitter:image" content="https://akupunktoeren.com/assets/images/hero.jpg">
 <link rel="icon" href="../assets/images/favicon.png">
-<link rel="stylesheet" href="../assets/css/style.css?v=15">
+<link rel="stylesheet" href="../assets/css/style.css?v=16">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -295,6 +295,19 @@
   rejectBtn.addEventListener('click', function () {
     banner.hidden = true;
     try { localStorage.setItem(KEY, 'rejected'); } catch (e) {}
+  });
+})();
+(function () {
+  document.addEventListener('click', function (e) {
+    var link = e.target.closest && e.target.closest('a[href^="tel:"]');
+    if (!link) return;
+    if (typeof gtag === 'function') {
+      gtag('event', 'conversion', {
+        'send_to': 'AW-1065423115/5sDICPuq8ZUdEIuihPwD',
+        'value': 1.0,
+        'currency': 'DKK'
+      });
+    }
   });
 })();
 </script>
