@@ -208,11 +208,12 @@ def footer(prefix="../"):
 
 
 GOOGLE_ADS_ID = "AW-1065423115"
+GTM_ID = "GTM-NH7MS397"
 
 
 def cookie_banner(prefix="../"):
     return f'''<div class="cookie-banner" id="cookieBanner" hidden>
-  <p>Denne hjemmeside bruger nødvendige cookies (bl.a. til kontaktformularen) samt cookies til markedsføring (Google Ads), hvis du accepterer det. <a href="{prefix}privatlivspolitik/">Læs mere</a>.</p>
+  <p>Denne hjemmeside bruger nødvendige cookies (bl.a. til kontaktformularen) samt cookies til statistik og markedsføring (Google Analytics og Google Ads), hvis du accepterer det. <a href="{prefix}privatlivspolitik/">Læs mere</a>.</p>
   <div class="cookie-banner-actions">
     <button class="btn btn-outline" id="cookieBannerReject" type="button">Kun nødvendige</button>
     <button class="btn btn-cta" id="cookieBannerAccept" type="button">Accepter alle</button>
@@ -243,6 +244,7 @@ SCRIPT = '''<script>
 (function () {
   var KEY = 'cookie-consent';
   var GOOGLE_ADS_ID = 'AW-1065423115';
+  var GTM_ID = 'GTM-NH7MS397';
 
   function loadGoogleAds() {
     if (window.__googleAdsLoaded) return;
@@ -257,6 +259,19 @@ SCRIPT = '''<script>
     document.head.appendChild(script);
   }
 
+  function loadGTM() {
+    if (window.__gtmLoaded) return;
+    window.__gtmLoaded = true;
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+      var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', GTM_ID);
+  }
+
   var banner = document.getElementById('cookieBanner');
   var acceptBtn = document.getElementById('cookieBannerAccept');
   var rejectBtn = document.getElementById('cookieBannerReject');
@@ -267,6 +282,7 @@ SCRIPT = '''<script>
 
   if (consent === 'accepted') {
     loadGoogleAds();
+    loadGTM();
   } else if (consent !== 'rejected') {
     banner.hidden = false;
   }
@@ -275,6 +291,7 @@ SCRIPT = '''<script>
     banner.hidden = true;
     try { localStorage.setItem(KEY, 'accepted'); } catch (e) {}
     loadGoogleAds();
+    loadGTM();
   });
   rejectBtn.addEventListener('click', function () {
     banner.hidden = true;
