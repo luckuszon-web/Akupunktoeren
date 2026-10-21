@@ -429,7 +429,7 @@ p { margin: 0 0 1em; color: var(--color-text); }
   display: grid;
   grid-template-columns: 1.1fr 0.9fr;
   gap: 2.5rem;
-  align-items: center;
+  align-items: start;
 }
 .cta-band h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); }
 .cta-band p { color: rgba(255, 255, 255, 0.85); }
