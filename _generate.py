@@ -361,9 +361,9 @@ def page_banner(eyebrow, title, extra_contact=True):
 '''
 
 
-def page(slug, title, description, current, banner_eyebrow, banner_title, body, include_cta_band=True, noindex=False, og_type="website", extra_head="", prefix="../"):
+def page(slug, title, description, current, banner_eyebrow, banner_title, body, include_cta_band=True, noindex=False, og_type="website", extra_head="", prefix="../", title_override=None):
     cta = CTA_BAND if include_cta_band else ""
-    full_title = f"{title} | Akupunktur Charlotte Kuszon"
+    full_title = title_override if title_override else f"{title} | Akupunktur Charlotte Kuszon"
     canonical = f"{SITE_URL}/{slug}/"
     robots_tag = '<meta name="robots" content="noindex, follow">\n' if noindex else ""
     html = f'''<!DOCTYPE html>

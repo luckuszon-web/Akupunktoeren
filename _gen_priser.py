@@ -68,9 +68,10 @@ body = f'''  <section class="section">
 page(
     "priser",
     "Priser",
-    "Se priser på akupunktur, posturologi, iris aflæsning, healing, fjernhealing og skovhealing hos Akupunktur Charlotte Kuszon.",
+    "Første akupunkturbehandling 700 kr., herefter 600 kr. Iris- og posturologiundersøgelse er inkluderet. Tilskud muligt via sygeforsikringen danmark.",
     "priser",
     "Akupunktur Charlotte Kuszon",
     "Priser",
     body,
+    title_override="Priser på akupunktur fra 600 kr. | Rungsted/Hørsholm",
 )

@@ -11,9 +11,9 @@ from _generate import page, SITE_URL
 BLOG_POSTS = [
     (
         "hvad-koster-akupunktur",
-        "Hvad koster akupunktur? Priser og tilskud",
+        "Hvad koster akupunktur? Priser og tilskud (2026)",
         "Hvad koster akupunktur, og kan du få tilskud?",
-        "Se hvad akupunktur koster i Rungsted/Hørsholm, hvad første behandling indeholder, og hvordan du søger tilskud hos din sundhedsforsikring.",
+        "Se hvad en akupunkturbehandling koster, og hvordan du kan få tilskud via din sygeforsikring. Hos Charlotte Kuszon i Rungsted fra 600 kr.",
         "2026-10-08",
         "8. oktober 2026",
         "Se hvad akupunktur koster i Rungsted/Hørsholm, hvad første behandling indeholder, og hvordan du søger tilskud hos din sundhedsforsikring.",
@@ -104,6 +104,7 @@ def generate_post(slug, seo_title, h1_title, description, date_iso, date_display
         og_type="article",
         extra_head=article_schema(h1_title, description, date_iso, slug),
         prefix="../../",
+        title_override=seo_title,
     )
 
 
