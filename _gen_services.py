@@ -131,7 +131,16 @@ fjernhealing_body = f'''  <section class="section">
     </div>
   </section>
 '''
-page("fjernhealing", "Fjernhealing", "Fjernhealing hos Charlotte Kuszon – telefonisk healing mod smerter, posturologiske skævheder, høfeber og psykiske udfordringer.", "fjernhealing", "Akupunktur Charlotte Kuszon", "Fjernhealing", fjernhealing_body)
+page(
+    "fjernhealing",
+    "Fjernhealing",
+    "Fjernhealing hos Charlotte Kuszon: telefonisk healing, uanset hvor du befinder dig. Pris 500 kr. Ring 31 60 88 80 og book en tid.",
+    "fjernhealing",
+    "Akupunktur Charlotte Kuszon",
+    "Fjernhealing",
+    fjernhealing_body,
+    title_override="Fjernhealing – telefonisk healing, uanset hvor du er",
+)
 
 
 # ------------------------------------------------------ skovhealing/meditation
