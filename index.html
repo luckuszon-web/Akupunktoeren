@@ -17,7 +17,7 @@
 <meta name="twitter:description" content="RAB-registreret akupunktør i Rungsted Kyst siden 1998. Iris- og posturologiundersøgelse inkluderet. Tilskud via sygeforsikring. Ring 31 60 88 80.">
 <meta name="twitter:image" content="https://akupunktoeren.com/assets/images/hero.jpg">
 <link rel="icon" href="assets/images/favicon.png">
-<link rel="stylesheet" href="assets/css/style.css?v=19">
+<link rel="stylesheet" href="assets/css/style.css?v=20">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -389,6 +389,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h3>Har du spørgsmål eller ønsker du et tilbud?</h3>
         <p>Kontakt mig allerede i dag for kompetent sparring og rådgivning ved din behandling.</p>
       </div>
+      <div class="map-embed" id="mapEmbed" style="grid-column:1 / -1; margin-top:1rem;">
+        <div class="map-placeholder" id="mapPlaceholder">
+          <p>Kortet indlæses, når du accepterer cookies til statistik og markedsføring. <a href="privatlivspolitik/" style="color:inherit; text-decoration:underline;">Læs mere</a>, eller <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Pennehave+9,+2960+Rungsted+Kyst" target="_blank" rel="noopener" style="color:inherit; text-decoration:underline;">få rutevejledning</a> direkte.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -491,6 +496,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     })(window, document, 'script', 'dataLayer', GTM_ID);
   }
 
+  function loadMap() {
+    if (window.__mapLoaded) return;
+    var mapEl = document.getElementById('mapEmbed');
+    if (!mapEl) return;
+    window.__mapLoaded = true;
+    mapEl.innerHTML = '<iframe src="https://www.google.com/maps?q=Pennehave+9,+2960+Rungsted+Kyst&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Kort over klinikken i Rungsted"></iframe>';
+  }
+
   var banner = document.getElementById('cookieBanner');
   var acceptBtn = document.getElementById('cookieBannerAccept');
   var rejectBtn = document.getElementById('cookieBannerReject');
@@ -502,6 +515,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   if (consent === 'accepted') {
     loadGoogleAds();
     loadGTM();
+    loadMap();
   } else if (consent !== 'rejected') {
     banner.hidden = false;
   }
@@ -511,6 +525,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     try { localStorage.setItem(KEY, 'accepted'); } catch (e) {}
     loadGoogleAds();
     loadGTM();
+    loadMap();
   });
   rejectBtn.addEventListener('click', function () {
     banner.hidden = true;
