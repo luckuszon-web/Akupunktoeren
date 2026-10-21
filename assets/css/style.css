@@ -446,7 +446,8 @@ p { margin: 0 0 1em; color: var(--color-text); }
 }
 .cta-card h3 { font-size: 1.2rem; }
 .cta-card p { margin: 0; }
-.map-embed iframe { display: block; width: 100%; height: 320px; border: 0; border-radius: var(--radius); }
+.map-embed iframe { display: block; width: 100%; height: auto; aspect-ratio: 1 / 1; border: 0; border-radius: var(--radius); }
+.map-embed .map-placeholder { aspect-ratio: 1 / 1; display: flex; align-items: center; justify-content: center; }
 .map-placeholder {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.18);
