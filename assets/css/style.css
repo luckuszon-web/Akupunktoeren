@@ -595,6 +595,36 @@ p { margin: 0 0 1em; color: var(--color-text); }
 .blog-card h3 a:hover { color: var(--color-accent); }
 .blog-card p { margin-bottom: 0.6em; }
 
+/* -------------------- FAQ accordion -------------------- */
+.faq-list { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+.faq-item {
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 30px rgba(34, 34, 34, 0.06);
+  padding-inline: 1.5rem;
+}
+.faq-item summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-block: 1.25rem;
+  cursor: pointer;
+  list-style: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary h3 { margin: 0; font-size: 1.05rem; }
+.faq-item .faq-chevron {
+  flex-shrink: 0;
+  width: 0.9em;
+  height: 0.9em;
+  color: var(--color-accent);
+  transition: transform 0.2s ease;
+}
+.faq-item[open] .faq-chevron { transform: rotate(180deg); }
+.faq-item .faq-answer { padding-bottom: 1.5rem; }
+.faq-item .faq-answer p { margin: 0; }
+
 /* -------------------- price list -------------------- */
 .price-groups {
   display: grid;

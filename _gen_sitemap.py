@@ -36,8 +36,12 @@ SLUGS = [
     "tinnitus",
 ]
 
+# Homepage lastmod: update manually when the homepage content changes.
+HOMEPAGE_LASTMOD = "2026-10-21"
+
 urls = "\n".join(
-    f"  <url><loc>{SITE_URL}/{slug}/</loc></url>" if slug else f"  <url><loc>{SITE_URL}/</loc></url>"
+    f"  <url><loc>{SITE_URL}/</loc><lastmod>{HOMEPAGE_LASTMOD}</lastmod></url>" if not slug
+    else f"  <url><loc>{SITE_URL}/{slug}/</loc></url>"
     for slug in SLUGS
 )
 

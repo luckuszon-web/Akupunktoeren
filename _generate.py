@@ -385,7 +385,7 @@ def page(slug, title, description, current, banner_eyebrow, banner_title, body, 
 <meta name="twitter:description" content="{description}">
 <meta name="twitter:image" content="{SITE_URL}/assets/images/hero.jpg">
 <link rel="icon" href="{prefix}assets/images/favicon.png">
-<link rel="stylesheet" href="{prefix}assets/css/style.css?v=17">
+<link rel="stylesheet" href="{prefix}assets/css/style.css?v=18">
 {LOCAL_BUSINESS_SCHEMA}
 {extra_head}</head>
 <body>
