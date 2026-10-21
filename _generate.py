@@ -184,7 +184,7 @@ def footer(prefix="../"):
           <a href="mailto:ckuszon@akupunktoeren.com">ckuszon@akupunktoeren.com</a>
         </li>
       </ul>
-      <p>Kontakt mig for et tilbud.</p>
+      <p>Kontakt mig, hvis du har spørgsmål til din behandling eller andet.</p>
     </div>
     <div>
       <h4>Åbningstider</h4>
